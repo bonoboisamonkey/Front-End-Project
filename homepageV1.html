@@ -8,27 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <style>
-        .container img,
-        .carousel img,
-        .carouselFour img,
-        .instagram img {
-            object-fit: cover;
-            width: 100%;
-        }
-
-        header li {
-            text-decoration: none;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -37,61 +24,72 @@
         <div class="top-heading">
             <div class="row">
                 <div class="col-md-4">
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
                 </div>
                 <div class="col-md-4">
-                    Free shipping for standard order over $100
+                    <span class="simple-text">Free shipping for standard order over $100</span>
                 </div>
                 <div class="col-md-4">
-                    fashe@example.com
-                    <select>
-                        <option>USD</option>
-                        <option>EUR</option>
-                    </select>
+                    <div class="exchange">
+                        fashe@example.com
+                        <select>
+                            <option>USD</option>
+                            <option>EUR</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="#"><img src="images/logo.png" alt="logo" /></a>
-            </div>
-            <div class="col-md-4">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                            <ul>
-                                <li><a href="#">HomeV1</a></li>
-                                <li><a href="#">HomeV2</a></li>
-                                <li><a href="#">HomeV3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Shop</a>
-                        </li>
-                        <li>
-                            <a href="#">Sale</a>
-                        </li>
-                        <li>
-                            <a href="#">Features</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-4">
-                <a href="#"><img src="images/icons/icon-header-01.png" alt="account-icon" /></a>
-                <span></span>
-                <div class="purchase">
-                    <a href="#"><img src="images/icons/icon-header-02.png" alt="account-icon" /></a>
-                    <span>0</span>
+        <div class="main-heading">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt="logo" /></a></div>
+                </div>
+                <div class="col-md-4">
+                    <nav>
+                        <ul>
+                            <li class="sub-menu">
+                                <a href="#">Home</a>
+                                <ul class="sub-menu-content">
+                                    <li><a href="#">HomeV1</a></li>
+                                    <li><a href="#">HomeV2</a></li>
+                                    <li><a href="#">HomeV3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Sale</a>
+                            </li>
+                            <li>
+                                <a href="#">Features</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <div class="purchase">
+                        <a href="#"><img src="images/icons/icon-header-01.png" alt="account-icon" /></a>
+                        <span class="line"></span>
+                        <a href="#"><img src="images/icons/icon-header-02.png" alt="account-icon" /></a>
+                        <span>0</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,18 +99,35 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="10000">
                     <img src="images/master-slide-02.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-content">
+                        <span class="animated fadeInUp delay-1s">Women Collection 2018</span>
+                        <h2 class="animated fadeInDown delay-2s">New Arrivals</h2>
+                        <div class="shop-now animated fadeIn delay-3s bg-white">
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
                     <img src="images/master-slide-03.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-content">
+                        <span class="animated fadeInUp delay-1s">Women Collection 2018</span>
+                        <h2 class="animated fadeInDown delay-2s">New Arrivals</h2>
+                        <div class="shop-now animated fadeIn delay-3s bg-white">
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="images/master-slide-04.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-content">
+                        <span class="animated fadeInUp delay-1s">Women Collection 2018</span>
+                        <h2 class="animated fadeInDown delay-2s">New Arrivals</h2>
+                        <div class="shop-now animated fadeIn delay-3s bg-white">
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-content">
-                    <span>Women Collection 2018</span>
-                    <h2>New Arrivals</h2>
-                    <a href="#">Shop Now</a>
-                </div>
+
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,42 +140,57 @@
         </div>
     </section>
 
-    <section class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="mb-5">
-                    <img src="images/banner-02.jpg" alt="" />
-                    <a href="#">Dresses</a>
+    <section class="products">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-5">
+                        <img src="images/banner-02.jpg" alt="" />
+                        <div class="product-links">
+                            <a href="#">Dresses</a>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <img src="images/banner-05.jpg" alt="" />
+                        <div class="product-links">
+                            <a href="#">Sunglasses</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-5">
-                    <img src="images/banner-05.jpg" alt="" />
-                    <a href="#">Sunglasses</a>
+                <div class="col-md-4">
+                    <div class="mb-5">
+                        <img src="images/banner-03.jpg" alt="" />
+                        <div class="product-links">
+                            <a href="#">Watches</a>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <img src="images/banner-07.jpg" alt="" />
+                        <div class="product-links">
+                            <a href="#">Footware</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-5">
-                    <img src="images/banner-03.jpg" alt="" />
-                    <a href="#">Watches</a>
-                </div>
-                <div class="mb-5">
-                    <img src="images/banner-07.jpg" alt="" />
-                    <a href="#">Footwear</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-5">
-                    <img src="images/banner-04.jpg" alt="" />
-                    <a href="#">Bags</a>
-                </div>
-                <div class="mb-5">
-                    <img src="images/bg-01.jpg" alt="" />
-                    <h4>Sign up & get 20% off</h4>
-                    <p>Be the frist to know about the latest fashion news and get exclu-sive offers</p>
-                    <div>
-                        <a href="#">Sign Up</a>
+                <div class="col-md-4">
+                    <div class="mb-5">
+                        <img src="images/banner-04.jpg" alt="" />
+                        <div class="product-links">
+                            <a href="#">Bags</a>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <img src="images/bg-01.jpg" alt="" />
+                        <div class="sign-up">
+                            <h4>Sign up & get 20% off</h4>
+                            <p>Be the frist to know about the latest fashion news and get exclu-sive offers</p>
+                            <div>
+                                <a href="#">Sign Up</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <section class="container">
         <h2>Featured Products</h2>

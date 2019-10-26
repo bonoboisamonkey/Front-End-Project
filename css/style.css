@@ -1,0 +1,121 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  list-style-type: none;
+}
+
+a {
+  color: #888888;
+}
+
+a:hover {
+  color: red;
+}
+
+.container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.top-heading {
+  background-color: #f5f5f5;
+  color: #888888;
+}
+
+.top-heading .social-media {
+  padding-left: 40px;
+  font-size: 18px;
+}
+
+.top-heading .simple-text {
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.top-heading .exchange {
+  float: right;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+.main-heading {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.main-heading .logo {
+  padding: 20px;
+  padding-left: 50px;
+}
+
+.main-heading .sub-menu-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 2000;
+  background-color: black;
+  color: white;
+}
+
+.main-heading .sub-menu:hover .sub-menu-content {
+  display: block;
+}
+
+.main-heading nav {
+  text-align: center;
+  padding: 10px;
+}
+
+.main-heading .purchase {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.carousel {
+  position: relative;
+  color: white;
+}
+
+.carousel .carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.carousel .carousel-content .shop-now {
+  border-radius: 15px;
+  text-align: center;
+}
+
+.carousel .carousel-content .shop-now a {
+  color: black;
+}
+
+.products .mb-5 {
+  position: relative;
+}
+
+.products .mb-5 .product-links {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border-radius: 10px;
+  bottom: 5%;
+  left: 35%;
+}
+
+.products .mb-5 .sign-up {
+  position: absolute;
+  top: 0;
+  padding: 50px;
+}
+/*# sourceMappingURL=style.css.map */

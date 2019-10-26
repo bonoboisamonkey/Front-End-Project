@@ -1,0 +1,115 @@
+//variables
+$siteMainColor: #888888;
+$siteBGColor: #f5f5f5;
+
+//general properties
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  list-style-type: none;
+}
+
+a {
+  color: $siteMainColor;
+}
+
+a:hover {
+  color: red;
+}
+
+.container {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+//----------------
+
+.top-heading {
+  background-color: $siteBGColor;
+  color: $siteMainColor;
+  .social-media {
+    padding-left: 40px;
+    font-size: 18px;
+  }
+  .simple-text {
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+  .exchange {
+    float: right;
+    padding: 10px;
+    padding-right: 40px;
+  }
+}
+
+.main-heading {
+  position: sticky;
+  top: 0;
+  .logo {
+    padding: 20px;
+    padding-left: 50px;
+  }
+  .sub-menu-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 2000;
+    background-color: black;
+    color: white;
+  }
+  .sub-menu:hover .sub-menu-content {
+    display: block;
+  }
+  nav {
+    text-align: center;
+    padding: 10px;
+  }
+  .purchase {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+  }
+}
+
+.carousel {
+  position: relative;
+  color: white;
+  .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    .shop-now {
+      border-radius: 15px;
+      text-align: center;
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.products {
+  .mb-5{
+    position: relative;
+    .product-links {
+      position: absolute;
+      background-color: rgba($color: white, $alpha: 0.8);
+      padding: 10px 30px;
+      border-radius: 10px;
+      bottom: 5%;
+      left: 35%;
+    }
+    .sign-up{
+      position: absolute;
+      top:0;
+      padding: 50px;
+    }
+  }
+}
