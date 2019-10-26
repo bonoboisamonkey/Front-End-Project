@@ -28,6 +28,10 @@ a:hover {
     object-fit: cover;
   }
 }
+
+.old-price {
+  text-decoration: line-through;
+}
 //----------------
 
 .top-heading {
@@ -96,7 +100,7 @@ a:hover {
 }
 
 .products {
-  .mb-5{
+  .mb-5 {
     position: relative;
     .product-links {
       position: absolute;
@@ -106,10 +110,130 @@ a:hover {
       bottom: 5%;
       left: 35%;
     }
-    .sign-up{
+    .sign-up {
       position: absolute;
-      top:0;
+      top: 0;
       padding: 50px;
+      text-align: center;
+      h4 {
+        font-size: 40px;
+      }
+      p {
+        color: $siteMainColor;
+      }
+      div {
+        background-color: black;
+        border-radius: 7px;
+        padding: 10px;
+        a {
+          color: white;
+        }
+      }
     }
   }
 }
+
+.featured-products {
+  padding: 55px 0;
+  h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  .block {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      padding: 5px;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+
+.countdown-banner {
+  background-color: $siteBGColor;
+  padding: 60px 0;
+  .banner {
+    position: relative;
+    .img-feature-content {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      h3 {
+        font-size: 50px;
+      }
+      a {
+        color: white;
+      }
+    }
+    .img-countdown-content {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      text-align: center;
+      a {
+        display: block;
+      }
+      .countdown {
+        padding-top: 40px;
+        div {
+          margin-right: 5px;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+.our-blog {
+  padding: 60px 0;
+  text-align: center;
+  h3 {
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.instagram {
+  h2 {
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .block-items {
+    position: relative;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      transition: .3s ease;
+    }
+    .overlay{
+      position: absolute;
+      left: 0;
+      bottom:0;
+      right: 0;
+      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transition: .4s ease-in-out;
+    }
+  }
+  .block-items:hover .overlay{
+    transform: scale(1);
+  }
+}
+
+

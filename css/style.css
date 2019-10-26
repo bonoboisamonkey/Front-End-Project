@@ -23,6 +23,10 @@ a:hover {
      object-fit: cover;
 }
 
+.old-price {
+  text-decoration: line-through;
+}
+
 .top-heading {
   background-color: #f5f5f5;
   color: #888888;
@@ -117,5 +121,147 @@ a:hover {
   position: absolute;
   top: 0;
   padding: 50px;
+  text-align: center;
+}
+
+.products .mb-5 .sign-up h4 {
+  font-size: 40px;
+}
+
+.products .mb-5 .sign-up p {
+  color: #888888;
+}
+
+.products .mb-5 .sign-up div {
+  background-color: black;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.products .mb-5 .sign-up div a {
+  color: white;
+}
+
+.featured-products {
+  padding: 55px 0;
+}
+
+.featured-products h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.featured-products .block {
+  position: relative;
+}
+
+.featured-products .block .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  padding: 5px;
+}
+
+.featured-products .block a {
+  display: block;
+}
+
+.countdown-banner {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+.countdown-banner .banner {
+  position: relative;
+}
+
+.countdown-banner .banner .img-feature-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.countdown-banner .banner .img-feature-content h3 {
+  font-size: 50px;
+}
+
+.countdown-banner .banner .img-feature-content a {
+  color: white;
+}
+
+.countdown-banner .banner .img-countdown-content {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  text-align: center;
+}
+
+.countdown-banner .banner .img-countdown-content a {
+  display: block;
+}
+
+.countdown-banner .banner .img-countdown-content .countdown {
+  padding-top: 40px;
+}
+
+.countdown-banner .banner .img-countdown-content .countdown div {
+  margin-right: 5px;
+  border: 1px solid black;
+}
+
+.our-blog {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.our-blog h3 {
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.instagram h2 {
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.instagram .block-items {
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram .block-items img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.instagram .block-items .overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.instagram .block-items:hover .overlay {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */
