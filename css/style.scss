@@ -9,8 +9,7 @@ ul {
 }
 
 li {
-  display: inline-block;
-  padding: 10px;
+  padding-right: 10px;
   list-style-type: none;
 }
 
@@ -34,66 +33,162 @@ a:hover {
 }
 //----------------
 
-.top-heading {
-  background-color: $siteBGColor;
-  color: $siteMainColor;
-  .social-media {
-    padding-left: 40px;
-    font-size: 18px;
-  }
-  .simple-text {
-    padding: 10px;
-    display: block;
-    text-align: center;
-  }
-  .exchange {
-    float: right;
-    padding: 10px;
-    padding-right: 40px;
-  }
-}
+header {
+  height: 125px;
+  overflow: hidden;
+  .wrapper-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .top-heading {
+      background-color: $siteBGColor;
+      color: $siteMainColor;
+      .social-media {
+        padding: 10px;
+        padding-left: 50px;
+        font-size: 18px;
+        li {
+          display: inline-block;
+        }
+      }
+      .simple-text {
+        padding: 10px;
+        display: block;
+        text-align: center;
+      }
+      .exchange {
+        float: right;
+        padding: 10px;
+        padding-right: 40px;
+        display: flex;
+        z-index: 10000;
+        cursor: pointer;
+        .email {
+          padding-right: 20px;
+        }
+        #options {
+          display: none;
+          position: absolute;
+          right: 9%;
+          top: 70%;
+          span {
+            display: block;
+            padding: 5px;
+            background-color: black;
+            color: white;
+          }
+          span:hover {
+            background-color: red;
+          }
+        }
+      }
+    }
 
-.main-heading {
-  position: sticky;
-  top: 0;
-  .logo {
-    padding: 20px;
-    padding-left: 50px;
-  }
-  .sub-menu-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    z-index: 2000;
-    background-color: black;
-    color: white;
-  }
-  .sub-menu:hover .sub-menu-content {
-    display: block;
-  }
-  nav {
-    text-align: center;
-    padding: 10px;
-  }
-  .purchase {
-    position: absolute;
-    top: 30%;
-    right: 10%;
+    .main-heading {
+      background-color: white;
+      .logo {
+        padding: 20px;
+        padding-left: 50px;
+      }
+      .menu {
+        position: relative;
+        nav {
+          > ul {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            > li {
+              padding: 20px 15px;
+              font-size: 15px;
+            }
+            .sub-menu {
+              position: relative;
+              .sub-menu-content {
+                position: absolute;
+                visibility: hidden;
+                z-index: 15;
+                top: 100%;
+                background-color: black;
+              }
+            }
+          }
+        }
+      }
+      .purchase {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        .line {
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: black;
+          margin-left: 23px;
+          margin-right: 23px;
+          margin-top: 5px;
+        }
+        #items-count {
+          position: absolute;
+          display: block;
+          background-color: black;
+          color: white;
+          font-size: 0.7em;
+          border-radius: 100%;
+          padding: 0 5px;
+          top: 0;
+          right: -10px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
   }
 }
 
 .carousel {
-  position: relative;
+  overflow: hidden;
   color: white;
-  .carousel-content {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    .shop-now {
-      border-radius: 15px;
+  > a {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      visibility: hidden;
+    }
+  }
+  a:hover {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      visibility: visible;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      padding: 15px;
+    }
+  }
+
+  .carousel-item {
+    position: relative;
+    .carousel-content {
+      position: absolute;
+      top: 30%;
+      left: 40%;
       text-align: center;
-      a {
-        color: black;
+      h2 {
+        font-size: 60px;
+        line-height: 1.2em;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin: 30px 0;
+      }
+      span {
+        font-size: 1.2em;
+      }
+      .shop-now {
+        border-radius: 20px;
+        width: 35%;
+        padding: 10px 20px;
+        margin: auto;
+        a {
+          color: black;
+        }
       }
     }
   }
@@ -217,23 +312,79 @@ a:hover {
     img {
       object-fit: cover;
       width: 100%;
-      transition: .3s ease;
+      transition: 0.3s ease;
     }
-    .overlay{
+    .overlay {
       position: absolute;
       left: 0;
-      bottom:0;
+      bottom: 0;
       right: 0;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       width: 100%;
       height: 100%;
       transform: scale(0);
-      transition: .4s ease-in-out;
+      transition: 0.4s ease-in-out;
     }
   }
-  .block-items:hover .overlay{
+  .block-items:hover .overlay {
     transform: scale(1);
   }
 }
 
+.details {
+  padding: 80px 0;
+  .col-md-4 {
+    text-align: center;
+  }
+  .col-md-4:nth-child(2) {
+    border-right: 1px black solid;
+    border-left: 1px black solid;
+  }
+}
 
+footer {
+  background-color: $siteBGColor;
+  .connection {
+    padding: 70px 40px;
+    li {
+      display: inline-block;
+    }
+  }
+  .links {
+    padding: 70px 0;
+    div {
+      width: 33%;
+      h4 {
+        padding-bottom: 30px;
+        font-weight: bold;
+      }
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .news {
+    padding: 70px 0;
+    h4 {
+      font-weight: bold;
+      padding-bottom: 30px;
+    }
+    input {
+      display: block;
+      width: 50%;
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid black;
+    }
+    button {
+      display: block;
+      background-color: black;
+      border-radius: 20px;
+      padding: 10px;
+      margin-top: 30px;
+      a {
+        color: white;
+      }
+    }
+  }
+}

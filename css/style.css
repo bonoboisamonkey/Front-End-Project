@@ -4,8 +4,7 @@ ul {
 }
 
 li {
-  display: inline-block;
-  padding: 10px;
+  padding-right: 10px;
   list-style-type: none;
 }
 
@@ -27,80 +26,188 @@ a:hover {
   text-decoration: line-through;
 }
 
-.top-heading {
+header {
+  height: 125px;
+  overflow: hidden;
+}
+
+header .wrapper-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+header .wrapper-header .top-heading {
   background-color: #f5f5f5;
   color: #888888;
 }
 
-.top-heading .social-media {
-  padding-left: 40px;
+header .wrapper-header .top-heading .social-media {
+  padding: 10px;
+  padding-left: 50px;
   font-size: 18px;
 }
 
-.top-heading .simple-text {
+header .wrapper-header .top-heading .social-media li {
+  display: inline-block;
+}
+
+header .wrapper-header .top-heading .simple-text {
   padding: 10px;
   display: block;
   text-align: center;
 }
 
-.top-heading .exchange {
+header .wrapper-header .top-heading .exchange {
   float: right;
   padding: 10px;
   padding-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10000;
+  cursor: pointer;
 }
 
-.main-heading {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+header .wrapper-header .top-heading .exchange .email {
+  padding-right: 20px;
 }
 
-.main-heading .logo {
-  padding: 20px;
-  padding-left: 50px;
-}
-
-.main-heading .sub-menu-content {
+header .wrapper-header .top-heading .exchange #options {
   display: none;
   position: absolute;
-  left: 0;
-  z-index: 2000;
+  right: 9%;
+  top: 70%;
+}
+
+header .wrapper-header .top-heading .exchange #options span {
+  display: block;
+  padding: 5px;
   background-color: black;
   color: white;
 }
 
-.main-heading .sub-menu:hover .sub-menu-content {
-  display: block;
+header .wrapper-header .top-heading .exchange #options span:hover {
+  background-color: red;
 }
 
-.main-heading nav {
-  text-align: center;
-  padding: 10px;
+header .wrapper-header .main-heading {
+  background-color: white;
 }
 
-.main-heading .purchase {
+header .wrapper-header .main-heading .logo {
+  padding: 20px;
+  padding-left: 50px;
+}
+
+header .wrapper-header .main-heading .menu {
+  position: relative;
+}
+
+header .wrapper-header .main-heading .menu nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+header .wrapper-header .main-heading .menu nav > ul > li {
+  padding: 20px 15px;
+  font-size: 15px;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu {
+  position: relative;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content {
+  position: absolute;
+  visibility: hidden;
+  z-index: 15;
+  top: 100%;
+  background-color: black;
+}
+
+header .wrapper-header .main-heading .purchase {
   position: absolute;
   top: 30%;
   right: 10%;
 }
 
+header .wrapper-header .main-heading .purchase .line {
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: black;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-top: 5px;
+}
+
+header .wrapper-header .main-heading .purchase #items-count {
+  position: absolute;
+  display: block;
+  background-color: black;
+  color: white;
+  font-size: 0.7em;
+  border-radius: 100%;
+  padding: 0 5px;
+  top: 0;
+  right: -10px;
+  width: 16px;
+  height: 16px;
+}
+
 .carousel {
-  position: relative;
+  overflow: hidden;
   color: white;
 }
 
-.carousel .carousel-content {
-  position: absolute;
-  top: 50%;
-  left: 40%;
+.carousel > a .carousel-control-prev-icon,
+.carousel > a .carousel-control-next-icon {
+  visibility: hidden;
 }
 
-.carousel .carousel-content .shop-now {
-  border-radius: 15px;
+.carousel a:hover .carousel-control-prev-icon,
+.carousel a:hover .carousel-control-next-icon {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.carousel .carousel-item {
+  position: relative;
+}
+
+.carousel .carousel-item .carousel-content {
+  position: absolute;
+  top: 30%;
+  left: 40%;
   text-align: center;
 }
 
-.carousel .carousel-content .shop-now a {
+.carousel .carousel-item .carousel-content h2 {
+  font-size: 60px;
+  line-height: 1.2em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.carousel .carousel-item .carousel-content span {
+  font-size: 1.2em;
+}
+
+.carousel .carousel-item .carousel-content .shop-now {
+  border-radius: 20px;
+  width: 35%;
+  padding: 10px 20px;
+  margin: auto;
+}
+
+.carousel .carousel-item .carousel-content .shop-now a {
   color: black;
 }
 
@@ -242,8 +349,8 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .instagram .block-items .overlay {
@@ -256,12 +363,83 @@ a:hover {
   height: 100%;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .instagram .block-items:hover .overlay {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.details {
+  padding: 80px 0;
+}
+
+.details .col-md-4 {
+  text-align: center;
+}
+
+.details .col-md-4:nth-child(2) {
+  border-right: 1px black solid;
+  border-left: 1px black solid;
+}
+
+footer {
+  background-color: #f5f5f5;
+}
+
+footer .connection {
+  padding: 70px 40px;
+}
+
+footer .connection li {
+  display: inline-block;
+}
+
+footer .links {
+  padding: 70px 0;
+}
+
+footer .links div {
+  width: 33%;
+}
+
+footer .links div h4 {
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+footer .links div li {
+  padding-bottom: 10px;
+}
+
+footer .news {
+  padding: 70px 0;
+}
+
+footer .news h4 {
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+footer .news input {
+  display: block;
+  width: 50%;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+footer .news button {
+  display: block;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+footer .news button a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
