@@ -158,7 +158,7 @@ header {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       visibility: visible;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 50%;
       padding: 15px;
     }
@@ -197,13 +197,21 @@ header {
 .products {
   .mb-5 {
     position: relative;
+    overflow: hidden;
+    a {
+      text-transform: uppercase;
+    }
+    > img {
+      transform: scale(1);
+      transition: 0.6s;
+    }
     .product-links {
       position: absolute;
-      background-color: rgba($color: white, $alpha: 0.8);
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 10px 30px;
-      border-radius: 10px;
+      border-radius: 5px;
       bottom: 5%;
-      left: 35%;
+      left: 33%;
     }
     .sign-up {
       position: absolute;
@@ -217,13 +225,20 @@ header {
         color: $siteMainColor;
       }
       div {
+        width: 60%;
+        margin: auto;
         background-color: black;
-        border-radius: 7px;
+        border-radius: 25px;
         padding: 10px;
         a {
           color: white;
         }
       }
+    }
+  }
+  .mb-5:hover {
+    > img {
+      transform: scale(1.1);
     }
   }
 }
@@ -235,17 +250,19 @@ header {
     padding-bottom: 20px;
     font-weight: bold;
   }
-  .block {
-    position: relative;
-    .badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      color: white;
-      padding: 5px;
-    }
-    a {
-      display: block;
+  .owl-carousel {
+    .block {
+      position: relative;
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        padding: 5px;
+      }
+      a {
+        display: block;
+      }
     }
   }
 }

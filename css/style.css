@@ -213,15 +213,27 @@ header .wrapper-header .main-heading .purchase #items-count {
 
 .products .mb-5 {
   position: relative;
+  overflow: hidden;
+}
+
+.products .mb-5 a {
+  text-transform: uppercase;
+}
+
+.products .mb-5 > img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .products .mb-5 .product-links {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   bottom: 5%;
-  left: 35%;
+  left: 33%;
 }
 
 .products .mb-5 .sign-up {
@@ -240,13 +252,20 @@ header .wrapper-header .main-heading .purchase #items-count {
 }
 
 .products .mb-5 .sign-up div {
+  width: 60%;
+  margin: auto;
   background-color: black;
-  border-radius: 7px;
+  border-radius: 25px;
   padding: 10px;
 }
 
 .products .mb-5 .sign-up div a {
   color: white;
+}
+
+.products .mb-5:hover > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .featured-products {
@@ -259,11 +278,11 @@ header .wrapper-header .main-heading .purchase #items-count {
   font-weight: bold;
 }
 
-.featured-products .block {
+.featured-products .owl-carousel .block {
   position: relative;
 }
 
-.featured-products .block .badge {
+.featured-products .owl-carousel .block .badge {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -271,7 +290,7 @@ header .wrapper-header .main-heading .purchase #items-count {
   padding: 5px;
 }
 
-.featured-products .block a {
+.featured-products .owl-carousel .block a {
   display: block;
 }
 
