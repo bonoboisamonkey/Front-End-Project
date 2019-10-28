@@ -79,14 +79,19 @@ header .main-heading .menu nav > ul .sub-menu {
 header .main-heading .menu nav > ul .sub-menu .sub-menu-content {
   position: absolute;
   visibility: hidden;
-  z-index: 15;
   top: 100%;
   background-color: black;
+}
+
+header .main-heading .menu nav > ul .sub-menu:hover .sub-menu-content {
+  visibility: visible;
+  z-index: 100;
 }
 
 header .main-heading .exchange {
   float: right;
   padding: 10px;
+  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,8 +106,9 @@ header .main-heading .exchange .email {
 header .main-heading .exchange #options {
   display: none;
   position: absolute;
-  right: 9%;
+  right: 57%;
   top: 70%;
+  z-index: 100;
 }
 
 header .main-heading .exchange #options span {

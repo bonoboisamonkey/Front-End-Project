@@ -1,0 +1,28 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-right: 10px;
+  list-style-type: none;
+}
+
+a {
+  color: #888888;
+}
+
+a:hover {
+  color: red;
+}
+
+.container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=styleV3.css.map */

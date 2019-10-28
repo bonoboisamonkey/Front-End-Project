@@ -28,7 +28,6 @@ a:hover {
 
 header {
   height: 125px;
-  overflow: hidden;
 }
 
 header .wrapper-header {
@@ -78,6 +77,7 @@ header .wrapper-header .top-heading .exchange #options {
   position: absolute;
   right: 9%;
   top: 70%;
+  z-index: 100;
 }
 
 header .wrapper-header .top-heading .exchange #options span {
@@ -124,9 +124,12 @@ header .wrapper-header .main-heading .menu nav > ul .sub-menu {
 header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content {
   position: absolute;
   visibility: hidden;
-  z-index: 15;
   top: 100%;
   background-color: black;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu:hover .sub-menu-content {
+  visibility: visible;
 }
 
 header .wrapper-header .main-heading .purchase {

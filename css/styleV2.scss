@@ -70,10 +70,13 @@ header {
                         .sub-menu-content {
                             position: absolute;
                             visibility: hidden;
-                            z-index: 15;
                             top: 100%;
                             background-color: black;
                         }
+                    }
+                    .sub-menu:hover .sub-menu-content {
+                        visibility: visible;
+                        z-index: 100;
                     }
                 }
             }
@@ -81,6 +84,7 @@ header {
         .exchange {
             float: right;
             padding: 10px;
+            padding-right: 40px;
             display: flex;
             z-index: 10000;
             cursor: pointer;
@@ -90,8 +94,9 @@ header {
             #options {
                 display: none;
                 position: absolute;
-                right: 9%;
+                right: 57%;
                 top: 70%;
+                z-index: 100;
                 span {
                     display: block;
                     padding: 5px;
