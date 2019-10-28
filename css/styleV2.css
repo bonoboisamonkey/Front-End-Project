@@ -316,6 +316,13 @@ header .main-heading .purchase #items-count {
   display: block;
 }
 
+.lookbook .fixed-image {
+  background-image: url("/images/bg-video-01.jpg");
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+}
+
 .our-blog {
   padding: 60px 0;
   text-align: center;
