@@ -1,0 +1,237 @@
+//variables
+$siteMainColor: #888888;
+$siteBGColor: #f5f5f5;
+//general properties
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-right: 10px;
+  list-style-type: none;
+}
+
+a {
+  color: $siteMainColor;
+}
+
+a:hover {
+  color: red;
+}
+
+.container {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+//----------------
+
+header {
+  height: 125px;
+  .wrapper-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .top-heading {
+      background-color: $siteBGColor;
+      color: $siteMainColor;
+      .social-media {
+        padding: 10px;
+        padding-left: 50px;
+        font-size: 18px;
+        li {
+          display: inline-block;
+        }
+      }
+      .simple-text {
+        padding: 10px;
+        display: block;
+        text-align: center;
+      }
+      .exchange {
+        float: right;
+        padding: 10px;
+        padding-right: 40px;
+        display: flex;
+        z-index: 10000;
+        cursor: pointer;
+        .email {
+          padding-right: 20px;
+        }
+        #options {
+          display: none;
+          position: absolute;
+          right: 9%;
+          top: 70%;
+          z-index: 100;
+          span {
+            display: block;
+            padding: 5px;
+            background-color: black;
+            color: white;
+          }
+          span:hover {
+            background-color: red;
+          }
+        }
+      }
+    }
+    .main-heading {
+      background-color: white;
+      .logo {
+        padding: 20px;
+        padding-left: 50px;
+      }
+      .menu {
+        position: relative;
+        nav {
+          > ul {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            > li {
+              padding: 20px 15px;
+              font-size: 15px;
+            }
+            .sub-menu {
+              position: relative;
+              .sub-menu-content {
+                position: absolute;
+                visibility: hidden;
+                top: 100%;
+                background-color: black;
+              }
+            }
+            .sub-menu:hover .sub-menu-content {
+              visibility: visible;
+            }
+          }
+        }
+      }
+      .purchase {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        .line {
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: black;
+          margin-left: 23px;
+          margin-right: 23px;
+          margin-top: 5px;
+        }
+        #items-count {
+          position: absolute;
+          display: block;
+          background-color: black;
+          color: white;
+          font-size: 0.7em;
+          border-radius: 100%;
+          padding: 0 5px;
+          top: 0;
+          right: -10px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding-bottom: 60px;
+  .top-main {
+    position: relative;
+    span {
+      position: absolute;
+      top: 30%;
+      left: 45%;
+      font-size: 4em;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .our-story {
+    .photo {
+        overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: 0.4s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    article {
+      .quoto {
+        border-left: 1px solid gray;
+        padding-left: 30px;
+        margin-left: 5px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $siteBGColor;
+  .connection {
+    padding: 70px 40px;
+    li {
+      display: inline-block;
+    }
+  }
+  .links {
+    padding: 70px 0;
+    div {
+      width: 33%;
+      h4 {
+        padding-bottom: 30px;
+        font-weight: bold;
+      }
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .news {
+    padding: 70px 0;
+    h4 {
+      font-weight: bold;
+      padding-bottom: 30px;
+    }
+    input {
+      display: block;
+      width: 50%;
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid black;
+    }
+    button {
+      display: block;
+      background-color: black;
+      border-radius: 20px;
+      padding: 10px;
+      margin-top: 30px;
+      a {
+        color: white;
+      }
+    }
+  }
+}
