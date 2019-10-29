@@ -211,6 +211,70 @@ main .blog .blog-post .img-container:hover img {
           transform: scale(1.1);
 }
 
+main .blog aside .input-group {
+  padding-bottom: 40px;
+}
+
+main .blog aside h4 {
+  padding: 20px 0;
+}
+
+main .blog aside .categories {
+  padding-bottom: 40px;
+}
+
+main .blog aside .categories li:first-child {
+  border-top: 1px solid gray;
+}
+
+main .blog aside .categories li {
+  border-bottom: 1px solid gray;
+}
+
+main .blog aside .feat-pro li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+main .blog aside .feat-pro li > a {
+  display: block;
+  width: 80%;
+}
+
+main .blog aside .feat-pro li > a img {
+  width: 100%;
+}
+
+main .blog aside .feat-pro li div {
+  padding-left: 20px;
+}
+
+main .blog aside .archive li {
+  padding: 5px 0;
+}
+
+main .blog aside .archive li span {
+  float: right;
+}
+
+main .blog aside .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .blog aside .tags span {
+  border: 1px solid lightgrey;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 footer {
   background-color: #f5f5f5;
 }
