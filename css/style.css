@@ -297,6 +297,38 @@ main .container .our-products .container .catalog .block a {
   display: block;
 }
 
+main .container .shop-side ul li {
+  padding-bottom: 10px;
+}
+
+main .container .shop-side .price {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0;
+}
+
+main .container .shop-side .price #slider-range .ui-slider-handle {
+  border-radius: 100%;
+  outline: none;
+}
+
+main .container .shop-side .price #slider-range .ui-widget-header {
+  background-color: black;
+  height: 20%;
+  top: 50%;
+}
+
+main .container .shop-side .price #slider-range .ui-widget.ui-widget-content {
+  border: none;
+}
+
+main .container .shop-side .price #slider-range .ui-corner-all {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
 main .blog {
   padding: 60px 0;
 }

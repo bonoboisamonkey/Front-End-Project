@@ -256,13 +256,45 @@ main {
   }
   //features page end
 
-  //shop blocks
+  //shop page starts here
   .container {
     .our-products {
       @include product-block();
     }
+    .shop-side {
+      ul {
+        li {
+          padding-bottom: 10px;
+        }
+      }
+      .price {
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        padding: 10px 0;
+        #slider-range {
+          .ui-slider-handle {
+            border-radius: 100%;
+            outline: none;
+          }
+          .ui-widget-header {
+            background-color: black;
+            height: 20%;
+            top: 50%;
+          }
+          .ui-widget.ui-widget-content{
+            border: none;
+          }
+          .ui-corner-all{
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+          }
+        }
+      }
+    }
   }
-  //shop blocks ends
+  //shop page ends here
 
   //blog starts here
   .blog {
@@ -349,7 +381,7 @@ main {
   //product details starts
 
   //product details ends
-  
+
   //blog ends here
 
   //about starts here
