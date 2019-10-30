@@ -2,6 +2,9 @@
 $siteMainColor: #888888;
 $siteBGColor: #f5f5f5;
 //general properties
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -217,11 +220,12 @@ main {
   //top main for all side pages
   .top-main {
     position: relative;
+    overflow: hidden;
+    text-align: center;
     span {
       position: absolute;
-      top: 30%;
-      left: 45%;
-      font-size: 4em;
+      top: 0%;
+      font-size: 50px;
       color: white;
       font-weight: bold;
       text-transform: uppercase;
@@ -325,18 +329,28 @@ main {
       }
     }
     aside {
+      padding-left: 50px;
       .input-group {
-        padding-bottom: 40px;
+        margin-bottom: 40px;
+        padding: 5px;
+        border: 1px solid #888888;
+        border-radius: 20px;
+        button, input{
+          font-size: 0.9em;
+          border: none;
+        }
       }
       h4 {
         padding: 20px 0;
+        font-weight: 700;
       }
       .categories {
         li:first-child {
-          border-top: 1px solid gray;
+          border-top: 1px solid #888888;
         }
         li {
-          border-bottom: 1px solid gray;
+          padding: 10px 0;
+          border-bottom: 1px solid #888888;
         }
         padding-bottom: 40px;
       }
@@ -346,7 +360,7 @@ main {
           padding-bottom: 10px;
           > a {
             display: block;
-            width: 80%;
+            width: 50%;
             img {
               width: 100%;
             }
@@ -361,6 +375,7 @@ main {
           padding: 5px 0;
           span {
             float: right;
+            color: #888888;
           }
         }
       }
@@ -368,7 +383,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         span {
-          border: 1px solid lightgrey;
+          border: 1px solid #888888;
           padding: 5px 10px;
           border-radius: 15px;
           margin-right: 5px;
@@ -420,7 +435,32 @@ main {
     padding: 50px 0;
     #map {
       width: 100%;
-      height: 400px;
+      height: 450px;
+    }
+    .form-send{
+      h4{
+        font-size: 25px;
+        line-height: 30px;
+        padding-bottom: 20px;
+      }
+      form{
+        .form-group{
+          input, textarea{
+            font-size: 13px;
+            padding: 20px;
+            margin: 20px 0;
+          }
+        }
+        button{
+          border-radius: 20px;
+          border: none;
+          padding: 10px 50px;
+          &:hover{
+            background-color: red;
+            transition: .7s;
+          }
+        }
+      }
     }
   }
   //contacts end here
