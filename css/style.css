@@ -293,13 +293,26 @@ header .wrapper-header-red {
   padding: 55px 0;
 }
 
-.featured-products h2 {
+.featured-products .container {
+  text-align: center;
+}
+
+.featured-products .container h3 {
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
 }
 
-.featured-products .owl-carousel .block .image-container {
+.featured-products .container ul {
+  padding: 10px;
+}
+
+.featured-products .container ul li {
+  display: inline-block;
+}
+
+.featured-products .container .owl-carousel .block .image-container,
+.featured-products .container .catalog .block .image-container {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -308,7 +321,8 @@ header .wrapper-header-red {
   transition: 0.3s ease;
 }
 
-.featured-products .owl-carousel .block .image-container .badge {
+.featured-products .container .owl-carousel .block .image-container .badge,
+.featured-products .container .catalog .block .image-container .badge {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -316,7 +330,8 @@ header .wrapper-header-red {
   padding: 5px;
 }
 
-.featured-products .owl-carousel .block .image-container .image-overlay {
+.featured-products .container .owl-carousel .block .image-container .image-overlay,
+.featured-products .container .catalog .block .image-container .image-overlay {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -330,18 +345,21 @@ header .wrapper-header-red {
   transition: 0.4s ease-in-out;
 }
 
-.featured-products .owl-carousel .block .image-container .image-overlay button {
+.featured-products .container .owl-carousel .block .image-container .image-overlay button,
+.featured-products .container .catalog .block .image-container .image-overlay button {
   position: absolute;
   bottom: 10%;
   left: 30%;
 }
 
-.featured-products .owl-carousel .block .image-container:hover .image-overlay {
+.featured-products .container .owl-carousel .block .image-container:hover .image-overlay,
+.featured-products .container .catalog .block .image-container:hover .image-overlay {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.featured-products .owl-carousel .block a {
+.featured-products .container .owl-carousel .block a,
+.featured-products .container .catalog .block a {
   display: block;
 }
 
@@ -390,6 +408,14 @@ header .wrapper-header-red {
 .countdown-banner .banner .img-countdown-content .countdown div {
   margin-right: 5px;
   border: 1px solid black;
+}
+
+.lookbook .fixed-image {
+  background-image: url("/images/bg-video-01.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
 }
 
 .our-blog {
