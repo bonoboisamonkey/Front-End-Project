@@ -95,16 +95,16 @@ a:hover {
 //----------------
 header {
   .wrapper-header {
-    //position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 100;
     .top-heading {
       background-color: $siteBGColor;
       color: $siteMainColor;
+      font-size: 0.9em;
       .social-media {
         padding: 10px;
         padding-left: 50px;
-        font-size: 18px;
         li {
           display: inline-block;
         }
@@ -183,7 +183,6 @@ header {
     .active-user-bar {
       display: flex;
       justify-content: flex-end;
-      
       .purchase {
         display: flex;
         position: relative;
@@ -205,8 +204,8 @@ header {
           font-size: 0.7em;
           border-radius: 100%;
           padding: 0 5px;
-          top: 0;
-          right: -10px;
+          top: 15px;
+          right: 30px;
           width: 16px;
           height: 16px;
         }

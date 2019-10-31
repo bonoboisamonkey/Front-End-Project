@@ -20,14 +20,14 @@ $(document).ready(function () {
   $("#EUR").click(function () {
     alert("ok");
   });
-//   $(document).scroll(function () {
-//     if (
-//       document.body.scrollTop > 80 ||
-//       document.documentElement.scrollTop > 80
-//     ) {
-//       $(".top-heading").addClass("d-none");
-//     } else {
-//       $(".top-heading").removeClass("d-none");
-//     }
-//   });
+  $(document).scroll(function () {
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      $(".top-heading").addClass("d-none");
+    } else {
+      $(".top-heading").removeClass("d-none");
+    }
+  });
 });

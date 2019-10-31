@@ -31,6 +31,7 @@ a:hover {
 }
 
 header .wrapper-header {
+  position: fixed;
   width: 100%;
   z-index: 100;
 }
@@ -38,12 +39,12 @@ header .wrapper-header {
 header .wrapper-header .top-heading {
   background-color: #f5f5f5;
   color: #888888;
+  font-size: 0.9em;
 }
 
 header .wrapper-header .top-heading .social-media {
   padding: 10px;
   padding-left: 50px;
-  font-size: 18px;
 }
 
 header .wrapper-header .top-heading .social-media li {
@@ -172,8 +173,8 @@ header .wrapper-header .active-user-bar .purchase #items-count {
   font-size: 0.7em;
   border-radius: 100%;
   padding: 0 5px;
-  top: 0;
-  right: -10px;
+  top: 15px;
+  right: 30px;
   width: 16px;
   height: 16px;
 }
