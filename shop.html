@@ -73,32 +73,32 @@
                         <nav>
                             <ul>
                                 <li class="sub-menu">
-                                  <a href="/homepageV1.html">Home</a>
-                                  <ul class="sub-menu-content">
-                                    <li><a href="/homepageV1.html">HomeV1</a></li>
-                                    <li><a href="/homepageV2.html">HomeV2</a></li>
-                                    <li><a href="/homepageV3.html">HomeV3</a></li>
-                                  </ul>
+                                    <a href="/homepageV1.html">Home</a>
+                                    <ul class="sub-menu-content">
+                                        <li><a href="/homepageV1.html">HomeV1</a></li>
+                                        <li><a href="/homepageV2.html">HomeV2</a></li>
+                                        <li><a href="/homepageV3.html">HomeV3</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                  <a href="/shop.html">Shop</a>
+                                    <a href="/shop.html">Shop</a>
                                 </li>
                                 <li>
-                                  <a href="/shop.html" class="text-danger">Sale</a>
+                                    <a href="/shop.html" class="text-danger">Sale</a>
                                 </li>
                                 <li>
-                                  <a href="/features.html">Features</a>
+                                    <a href="/features.html">Features</a>
                                 </li>
                                 <li>
-                                  <a href="/blog.html">Blog</a>
+                                    <a href="/blog.html">Blog</a>
                                 </li>
                                 <li>
-                                  <a href="/about.html">About</a>
+                                    <a href="/about.html">About</a>
                                 </li>
                                 <li>
-                                  <a href="/contact.html">Contact</a>
+                                    <a href="/contact.html">Contact</a>
                                 </li>
-                              </ul>
+                            </ul>
                         </nav>
                     </div>
                     <div class="col-md-4">
@@ -123,8 +123,8 @@
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-md-4 shop-side">
-                    <h3>Categories</h3>
+                <div class="col-md-3 shop-side">
+                    <h4>Categories</h4>
                     <ul>
                         <li><a href="#">All</a></li>
                         <li><a href="#">Men</a></li>
@@ -132,32 +132,42 @@
                         <li><a href="#">Kids</a></li>
                         <li><a href="#">Accesories</a></li>
                     </ul>
-                    <h3>Filters</h3>
+                    <h4>Filters</h4>
                     <div class="price mb-5 mt-5">
+                        <span>Price: </span>
                         <div id="slider-range"></div>
-                        <div>
+                        <div class="fr">
                             <button>Filter</button>
-                            <label for="amount">Price</label>
-                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                            <span>Range: </span>
+                            <input type="text" id="amount" readonly style="border:0; color:#888;">
                         </div>
                     </div>
-                    <div class="color"></div>
+                    <div class="color">
+                        <ul id="color">
+                            <li style="background-color: blue;"></li>
+                            <li style="background-color: lightblue;"></li>
+                            <li style="background-color: orange;"></li>
+                            <li style="background-color: lightcoral;"></li>
+                            <li style="background-color: burlywood;"></li>
+                            <li style="background-color: rgba(0, 0, 255, 0.137);"></li>
+                        </ul>
+                    </div>
                     <div class="search">
                         <input type="text" />
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <select name="" id="">
-                            <option value="">Default sorting</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="">Price</option>
-                        </select>
-                        <span>Showing 1–12 of 16 results</span>
-                    </div>
+                <div class="col-md-9">
                     <section class="our-products">
                         <div class="container">
+                            <div class="top">
+                                <select name="" id="">
+                                    <option value="">Default sorting</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">Price</option>
+                                </select>
+                                <span>Showing 1–12 of 16 results</span>
+                            </div>
                             <div class="catalog ">
                                 <div class="row ">
                                     <div class="block col-md-4 ">
@@ -432,7 +442,10 @@
                     $(".top-heading").removeClass("d-none");
                 }
             });
-
+            $("#color>li").click(function(){
+                let li = $("#color>li");
+                console.log(li)
+            })
         });
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

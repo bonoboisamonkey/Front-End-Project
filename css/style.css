@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -201,24 +201,122 @@ main .top-main span {
 }
 
 main .coupon table {
-  border: 1px solid black;
   border-collapse: collapse;
+  margin-bottom: 30px;
 }
 
-main .coupon table tr .col1 {
+main .coupon table td {
+  padding: 20px;
+}
+
+main .coupon table thead td {
+  text-align: center;
+  font-weight: 700;
+}
+
+main .coupon table tbody tr {
+  border: 1px solid #e6e6e6;
+  color: #555;
+}
+
+main .coupon table tbody tr .col1 {
   width: 15%;
   padding: 40px;
 }
 
-main .coupon table tr td {
-  border-bottom: 1px solid black;
+main .coupon table tbody tr td {
+  text-align: center;
+}
+
+main .coupon table tbody tr td > button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+main .coupon table tbody tr td > input {
+  font-size: 14px;
+  padding: 10px;
+  width: 30%;
+  margin: 20px;
+}
+
+main .coupon table tbody tr input {
+  border: 1px solid #e6e6e6;
+}
+
+main .coupon table tbody tr .minus-plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+  background-color: #e6e6e6;
+}
+
+main .coupon table tbody tr .minus-plus input {
+  text-align: center;
+  width: 40%;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+
+main .coupon table tbody tr .minus-plus button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 30%;
+  background-color: #e6e6e6;
+  color: black;
 }
 
 main .coupon .cart-totals {
+  border: 1px solid #e6e6e6;
   width: 40%;
+  margin-bottom: 50px;
+  margin-left: auto;
 }
 
-main .coupon .cart-totals .container div {
+main .coupon .cart-totals .container {
+  padding: 40px;
+}
+
+main .coupon .cart-totals .container > div {
+  padding: 20px 0;
+}
+
+main .coupon .cart-totals .container b {
+  width: 30%;
+}
+
+main .coupon .cart-totals .container span {
+  width: 70%;
+}
+
+main .coupon .cart-totals .container h4 {
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+main .coupon .cart-totals .container .subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px dotted #e6e6e6;
+}
+
+main .coupon .cart-totals .container .shipping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px dotted #e6e6e6;
+}
+
+main .coupon .cart-totals .container .shipping div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +324,40 @@ main .coupon .cart-totals .container div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 70%;
+}
+
+main .coupon .cart-totals .container .shipping div input, main .coupon .cart-totals .container .shipping div select {
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  margin: 10px 15px 10px 0;
+  font-size: 14px;
+}
+
+main .coupon .cart-totals .container .shipping div button {
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+main .coupon .cart-totals .container .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .coupon .cart-totals .container .checkout button {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 main .container .our-products .container {
@@ -302,14 +434,39 @@ main .container .our-products .container .catalog .block a {
   display: block;
 }
 
+main .container .shop-side h4 {
+  font-weight: 700;
+}
+
+main .container .shop-side ul {
+  padding-bottom: 40px;
+}
+
 main .container .shop-side ul li {
   padding-bottom: 10px;
 }
 
 main .container .shop-side .price {
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  padding: 10px 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 40px 0;
+}
+
+main .container .shop-side .price div.fr {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .shop-side .price div.fr button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 0 15px;
+  margin-right: 40px;
 }
 
 main .container .shop-side .price #slider-range .ui-slider-handle {
@@ -327,11 +484,11 @@ main .container .shop-side .price #slider-range .ui-widget.ui-widget-content {
   border: none;
 }
 
-main .container .shop-side .price #slider-range .ui-corner-all {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+main .container .shop-side .color li {
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  cursor: pointer;
 }
 
 main .blog {
@@ -340,11 +497,13 @@ main .blog {
 
 main .blog .blog-post {
   padding-bottom: 80px;
+  color: #888888;
 }
 
 main .blog .blog-post .img-container {
   position: relative;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 main .blog .blog-post .img-container img {
@@ -369,6 +528,25 @@ main .blog .blog-post .img-container:hover img {
           transform: scale(1.1);
 }
 
+main .blog .blog-post h2 {
+  padding: 15px 0;
+}
+
+main .blog .blog-post h2 a {
+  color: black;
+}
+
+main .blog .blog-post h2 a:hover {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  color: darkred;
+}
+
+main .blog .blog-post .description {
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
 main .blog aside {
   padding-left: 50px;
 }
@@ -380,7 +558,8 @@ main .blog aside .input-group {
   border-radius: 20px;
 }
 
-main .blog aside .input-group button, main .blog aside .input-group input {
+main .blog aside .input-group button,
+main .blog aside .input-group input {
   font-size: 0.9em;
   border: none;
 }
@@ -403,6 +582,10 @@ main .blog aside .categories li {
   border-bottom: 1px solid #888888;
 }
 
+main .blog aside .feat-pro {
+  color: #888888;
+}
+
 main .blog aside .feat-pro li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,6 +604,11 @@ main .blog aside .feat-pro li > a img {
 
 main .blog aside .feat-pro li div {
   padding-left: 20px;
+}
+
+main .blog aside .feat-pro li div a {
+  display: block;
+  width: 80%;
 }
 
 main .blog aside .archive li {
@@ -492,7 +680,8 @@ main .form-section .form-send h4 {
   padding-bottom: 20px;
 }
 
-main .form-section .form-send form .form-group input, main .form-section .form-send form .form-group textarea {
+main .form-section .form-send form .form-group input,
+main .form-section .form-send form .form-group textarea {
   font-size: 13px;
   padding: 20px;
   margin: 20px 0;
@@ -506,8 +695,8 @@ main .form-section .form-send form button {
 
 main .form-section .form-send form button:hover {
   background-color: red;
-  -webkit-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 main .carousel {

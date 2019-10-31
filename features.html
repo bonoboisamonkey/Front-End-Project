@@ -60,32 +60,32 @@
                         <nav>
                             <ul>
                                 <li class="sub-menu">
-                                  <a href="/homepageV1.html">Home</a>
-                                  <ul class="sub-menu-content">
-                                    <li><a href="/homepageV1.html">HomeV1</a></li>
-                                    <li><a href="/homepageV2.html">HomeV2</a></li>
-                                    <li><a href="/homepageV3.html">HomeV3</a></li>
-                                  </ul>
+                                    <a href="/homepageV1.html">Home</a>
+                                    <ul class="sub-menu-content">
+                                        <li><a href="/homepageV1.html">HomeV1</a></li>
+                                        <li><a href="/homepageV2.html">HomeV2</a></li>
+                                        <li><a href="/homepageV3.html">HomeV3</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                  <a href="/shop.html">Shop</a>
+                                    <a href="/shop.html">Shop</a>
                                 </li>
                                 <li>
-                                  <a href="/shop.html" class="text-danger">Sale</a>
+                                    <a href="/shop.html" class="text-danger">Sale</a>
                                 </li>
                                 <li>
-                                  <a href="/features.html">Features</a>
+                                    <a href="/features.html">Features</a>
                                 </li>
                                 <li>
-                                  <a href="/blog.html">Blog</a>
+                                    <a href="/blog.html">Blog</a>
                                 </li>
                                 <li>
-                                  <a href="/about.html">About</a>
+                                    <a href="/about.html">About</a>
                                 </li>
                                 <li>
-                                  <a href="/contact.html">Contact</a>
+                                    <a href="/contact.html">Contact</a>
                                 </li>
-                              </ul>
+                            </ul>
                         </nav>
                     </div>
                     <div class="col-md-4">
@@ -125,9 +125,11 @@
                             <td>Man Tshirt</td>
                             <td>$36.00</td>
                             <td>
-                                <button><i class="fa fa-minus"></i></button>
-                                <input type="text">
-                                <button><i class="fa fa-plus"></i></button>
+                                <div class="minus-plus">
+                                    <button><i class="fa fa-minus"></i></button>
+                                    <input type="number" value="1">
+                                    <button><i class="fa fa-plus"></i></button>
+                                </div>
                             </td>
                             <td>$36.00</td>
                         </tr>
@@ -136,15 +138,17 @@
                             <td>Mug Adventure</td>
                             <td>$36.00</td>
                             <td>
-                                <button><i class="fa fa-minus"></i></button>
-                                <input type="text">
-                                <button><i class="fa fa-plus"></i></button>
+                                <div class="minus-plus">
+                                    <button><i class="fa fa-minus"></i></button>
+                                    <input type="number" value="1">
+                                    <button><i class="fa fa-plus"></i></button>
+                                </div>
                             </td>
                             <td>$36.00</td>
                         </tr>
                         <tr>
-                            <td colspan="4">
-                                <input type="text">
+                            <td colspan="4" style="text-align: left">
+                                <input type="text" id="coupon" placeholder="Coupon Code">
                                 <button>Apply Coupon</button>
                             </td>
                             <td>
@@ -177,10 +181,10 @@
                             </div>
                         </div>
                         <div class="total">
-                            <b>Total: </b> 
+                            <b>Total: </b>
                             <span>$39.00 </span>
                         </div>
-                        <div>
+                        <div class="checkout">
                             <button>Proceed to checkout</button>
                         </div>
                     </div>

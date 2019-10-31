@@ -2,8 +2,8 @@
 $siteMainColor: #888888;
 $siteBGColor: #f5f5f5;
 //general properties
-*{
-  font-family: 'Montserrat', sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 ul {
   margin: 0;
@@ -236,24 +236,132 @@ main {
   //features page
   .coupon {
     table {
-      border: 1px solid black;
       border-collapse: collapse;
-      tr {
-        .col1 {
-          width: 15%;
-          padding: 40px;
-        }
+      margin-bottom: 30px;
+      td {
+        padding: 20px;
+      }
+      thead {
         td {
-          border-bottom: 1px solid black;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+      tbody {
+        tr {
+          border: 1px solid #e6e6e6;
+          color: #555;
+          .col1 {
+            width: 15%;
+            padding: 40px;
+          }
+          td {
+            text-align: center;
+            > button {
+              outline: none;
+              border: none;
+              background-color: black;
+              color: white;
+              border-radius: 20px;
+              padding: 10px 30px;
+            }
+            > input{
+              font-size: 14px;
+              padding: 10px;
+              width: 30%;
+              margin: 20px;
+            }
+          }
+          
+          input{
+            border: 1px solid #e6e6e6;
+          }
+          .minus-plus {
+            display: flex;
+            width: 35%;
+            background-color: #e6e6e6;
+            input {
+              text-align: center;
+              width: 40%;
+              outline: none;
+              border: 2px solid #e6e6e6;
+              margin: 0;
+              padding: 0;
+            }
+            button {
+              outline: none;
+              border: none;
+              padding: 10px;
+              width: 30%;
+              background-color: #e6e6e6;
+              color: black;
+            }
+          }
         }
       }
     }
     .cart-totals {
+      border: 1px solid #e6e6e6;
       width: 40%;
+      margin-bottom: 50px;
+      margin-left: auto;
       .container {
-        div {
+        padding: 40px;
+        > div{
+          padding: 20px 0;
+        }
+        b{
+          width: 30%;
+        }
+        span{
+          width: 70%;
+        }
+        h4{
+          font-weight: 700;
+          padding-bottom: 20px;
+        }
+        .subtotal{
           display: flex;
-          flex-direction: column;
+          border-bottom: 1px dotted #e6e6e6;
+        }
+        .shipping{
+          display: flex;
+          border-bottom: 1px dotted #e6e6e6;
+          div {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            input, select{
+              border: 1px solid #e6e6e6;
+              padding: 10px;
+              margin: 10px 15px 10px 0;
+              font-size: 14px;
+            }
+            button{
+              outline: none;
+              border: none;
+              width: 80%;
+              background-color: black;
+              color: white;
+              border-radius: 20px;
+              padding: 10px;
+            }
+          }
+          
+        }
+        .total{
+          display: flex;
+        }
+        .checkout{
+          button{
+            outline: none;
+            border: none;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            padding: 10px;
+          }
         }
       }
     }
@@ -266,15 +374,33 @@ main {
       @include product-block();
     }
     .shop-side {
+      h4{
+        font-weight: 700;
+      }
       ul {
+        padding-bottom: 40px;
         li {
           padding-bottom: 10px;
         }
       }
       .price {
-        border-top: 1px solid lightgrey;
-        border-bottom: 1px solid lightgrey;
-        padding: 10px 0;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 40px 0;
+        div.fr{
+          padding: 20px 0;
+          display: flex;
+          button{
+            outline: none;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            padding: 0 15px;
+            margin-right: 40px;
+
+          }
+        }
         #slider-range {
           .ui-slider-handle {
             border-radius: 100%;
@@ -285,15 +411,19 @@ main {
             height: 20%;
             top: 50%;
           }
-          .ui-widget.ui-widget-content{
+          .ui-widget.ui-widget-content {
             border: none;
           }
-          .ui-corner-all{
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            border-top-right-radius: 0;
-            border-top-left-radius: 0;
+          .ui-corner-all {  
           }
+        }
+      }
+      .color{
+        li{
+          display: inline-block;
+          border-radius: 100%;
+          padding: 15px;
+          cursor: pointer;
         }
       }
     }
@@ -305,9 +435,11 @@ main {
     padding: 60px 0;
     .blog-post {
       padding-bottom: 80px;
+      color: #888888;
       .img-container {
         position: relative;
         overflow: hidden;
+        padding-bottom: 20px;
         img {
           transform: scale(1);
           transition: 0.4s;
@@ -327,6 +459,20 @@ main {
           transform: scale(1.1);
         }
       }
+      h2 {
+        padding: 15px 0;
+        a {
+          color: black;
+          &:hover {
+            transition: 0.8s;
+            color: darkred;
+          }
+        }
+      }
+      .description {
+        padding-bottom: 20px;
+        font-size: 15px;
+      }
     }
     aside {
       padding-left: 50px;
@@ -335,7 +481,8 @@ main {
         padding: 5px;
         border: 1px solid #888888;
         border-radius: 20px;
-        button, input{
+        button,
+        input {
           font-size: 0.9em;
           border: none;
         }
@@ -355,6 +502,7 @@ main {
         padding-bottom: 40px;
       }
       .feat-pro {
+        color: #888888;
         li {
           display: flex;
           padding-bottom: 10px;
@@ -367,6 +515,10 @@ main {
           }
           div {
             padding-left: 20px;
+            a {
+              display: block;
+              width: 80%;
+            }
           }
         }
       }
@@ -437,27 +589,28 @@ main {
       width: 100%;
       height: 450px;
     }
-    .form-send{
-      h4{
+    .form-send {
+      h4 {
         font-size: 25px;
         line-height: 30px;
         padding-bottom: 20px;
       }
-      form{
-        .form-group{
-          input, textarea{
+      form {
+        .form-group {
+          input,
+          textarea {
             font-size: 13px;
             padding: 20px;
             margin: 20px 0;
           }
         }
-        button{
+        button {
           border-radius: 20px;
           border: none;
           padding: 10px 50px;
-          &:hover{
+          &:hover {
             background-color: red;
-            transition: .7s;
+            transition: 0.7s;
           }
         }
       }
@@ -515,6 +668,7 @@ main {
       padding: 15px;
     }
   }
+
   .products {
     .product-items {
       position: relative;
