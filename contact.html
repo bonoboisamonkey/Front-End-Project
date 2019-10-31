@@ -10,13 +10,14 @@
     <!-- Bootstrap CSS -->
     <!-- Bootstrap CSS -->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -63,32 +64,32 @@
                         <nav>
                             <ul>
                                 <li class="sub-menu">
-                                  <a href="/homepageV1.html">Home</a>
-                                  <ul class="sub-menu-content">
-                                    <li><a href="/homepageV1.html">HomeV1</a></li>
-                                    <li><a href="/homepageV2.html">HomeV2</a></li>
-                                    <li><a href="/homepageV3.html">HomeV3</a></li>
-                                  </ul>
+                                    <a href="/homepageV1.html">Home</a>
+                                    <ul class="sub-menu-content">
+                                        <li><a href="/homepageV1.html">HomeV1</a></li>
+                                        <li><a href="/homepageV2.html">HomeV2</a></li>
+                                        <li><a href="/homepageV3.html">HomeV3</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                  <a href="/shop.html">Shop</a>
+                                    <a href="/shop.html">Shop</a>
                                 </li>
                                 <li>
-                                  <a href="/shop.html" class="text-danger">Sale</a>
+                                    <a href="/shop.html" class="text-danger">Sale</a>
                                 </li>
                                 <li>
-                                  <a href="/features.html">Features</a>
+                                    <a href="/features.html">Features</a>
                                 </li>
                                 <li>
-                                  <a href="/blog.html">Blog</a>
+                                    <a href="/blog.html">Blog</a>
                                 </li>
                                 <li>
-                                  <a href="/about.html">About</a>
+                                    <a href="/about.html">About</a>
                                 </li>
                                 <li>
-                                  <a href="/contact.html">Contact</a>
+                                    <a href="/contact.html">Contact</a>
                                 </li>
-                              </ul>
+                            </ul>
                         </nav>
                     </div>
                     <div class="col-md-4">
@@ -106,10 +107,9 @@
     <main>
         <section class="top-section">
             <div class="top-main">
-                <div class="top-image">
-                    <img src="images/heading-pages-06.jpg" alt="">
+                <div class="top-image-contact">
+                    <h2>Contact</h2>
                 </div>
-                <span>Contact</span>
             </div>
         </section>
         <section class="form-section">
@@ -226,31 +226,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function () {
-            $("#lang").click(function () {
-                let display = $(".options").css("display");
-                if (display == "none") {
-                    $(".options").css("display", "block");
-                } else {
-                    $(".options").css("display", "none");
-                }
-            });
-            $("#USD").click(function () {
-                alert("ok");
-            });
-            $("#EUR").click(function () {
-                alert("ok");
-            });
-            $(document).scroll(function () {
-                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                    $(".top-heading").addClass("d-none");
-                } else {
-                    $(".top-heading").removeClass("d-none");
-                }
-            });
-        });
-    </script>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>

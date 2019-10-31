@@ -30,10 +30,6 @@ a:hover {
   text-decoration: line-through;
 }
 
-header {
-  overflow: hidden;
-}
-
 header .wrapper-header {
   width: 100%;
   z-index: 100;
@@ -66,12 +62,7 @@ header .wrapper-header .top-heading .simple-text {
 }
 
 header .wrapper-header .top-heading .exchange {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  text-align: right;
   padding: 10px;
   padding-right: 40px;
   z-index: 10000;
@@ -132,6 +123,7 @@ header .wrapper-header .main-heading .menu nav > ul > li {
 
 header .wrapper-header .main-heading .menu nav > ul .sub-menu {
   position: relative;
+  z-index: 100;
 }
 
 header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content {
@@ -145,17 +137,25 @@ header .wrapper-header .main-heading .menu nav > ul .sub-menu:hover .sub-menu-co
   visibility: visible;
 }
 
-header .wrapper-header .purchase {
+header .wrapper-header .active-user-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
-  position: relative;
+          justify-content: flex-end;
 }
 
-header .wrapper-header .purchase .line {
+header .wrapper-header .active-user-bar .purchase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 15px;
+  padding-right: 40px;
+}
+
+header .wrapper-header .active-user-bar .purchase .line {
   width: 1px;
   height: 20px;
   background-color: black;
@@ -164,7 +164,7 @@ header .wrapper-header .purchase .line {
   margin-top: 5px;
 }
 
-header .wrapper-header .purchase #items-count {
+header .wrapper-header .active-user-bar .purchase #items-count {
   position: absolute;
   display: block;
   background-color: black;
@@ -187,17 +187,92 @@ header .wrapper-header-red {
 
 main .top-main {
   position: relative;
-  overflow: hidden;
   text-align: center;
 }
 
-main .top-main span {
-  position: absolute;
-  top: 0%;
-  font-size: 50px;
+main .top-main .top-image-shop {
+  background-image: url("/images/heading-pages-02.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+main .top-main .top-image-shop h2 {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+main .top-main .top-image-shop h6 {
+  color: white;
+}
+
+main .top-main .top-image-features {
+  background-image: url("/images/heading-pages-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+main .top-main .top-image-features h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .top-main .top-image-features h6 {
+  color: white;
+}
+
+main .top-main .top-image-contact {
+  background-image: url("/images/heading-pages-06.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+main .top-main .top-image-contact h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .top-main .top-image-contact h6 {
+  color: white;
+}
+
+main .top-main .top-image-blog {
+  background-image: url("/images/heading-pages-05.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+main .top-main .top-image-blog h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .top-main .top-image-blog h6 {
+  color: white;
+}
+
+main .top-main .top-image-about {
+  background-image: url("/images/heading-pages-06.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+main .top-main .top-image-about h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .top-main .top-image-about h6 {
+  color: white;
 }
 
 main .coupon table {
@@ -327,7 +402,8 @@ main .coupon .cart-totals .container .shipping div {
   width: 70%;
 }
 
-main .coupon .cart-totals .container .shipping div input, main .coupon .cart-totals .container .shipping div select {
+main .coupon .cart-totals .container .shipping div input,
+main .coupon .cart-totals .container .shipping div select {
   border: 1px solid #e6e6e6;
   padding: 10px;
   margin: 10px 15px 10px 0;
@@ -502,7 +578,6 @@ main .blog .blog-post {
 
 main .blog .blog-post .img-container {
   position: relative;
-  overflow: hidden;
   padding-bottom: 20px;
 }
 
@@ -634,10 +709,6 @@ main .blog aside .tags span {
   border-radius: 15px;
   margin-right: 5px;
   margin-bottom: 5px;
-}
-
-main .our-story .photo {
-  overflow: hidden;
 }
 
 main .our-story .photo img {
@@ -960,7 +1031,6 @@ main .instagram h2 {
 
 main .instagram .block-items {
   position: relative;
-  overflow: hidden;
 }
 
 main .instagram .block-items img {

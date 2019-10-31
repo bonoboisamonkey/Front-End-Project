@@ -94,7 +94,6 @@ a:hover {
 }
 //----------------
 header {
-  overflow: hidden;
   .wrapper-header {
     //position: fixed;
     width: 100%;
@@ -120,8 +119,7 @@ header {
         text-align: center;
       }
       .exchange {
-        display: flex;
-        justify-content: end;
+        text-align: right;
         padding: 10px;
         padding-right: 40px;
         z-index: 10000;
@@ -167,6 +165,7 @@ header {
             }
             .sub-menu {
               position: relative;
+              z-index: 100;
               .sub-menu-content {
                 position: absolute;
                 visibility: hidden;
@@ -181,30 +180,36 @@ header {
         }
       }
     }
-    .purchase {
+    .active-user-bar {
       display: flex;
-      justify-content: end;
-      position: relative;
-      .line {
-        width: 1px;
-        height: 20px;
-        background-color: black;
-        margin-left: 23px;
-        margin-right: 23px;
-        margin-top: 5px;
-      }
-      #items-count {
-        position: absolute;
-        display: block;
-        background-color: black;
-        color: white;
-        font-size: 0.7em;
-        border-radius: 100%;
-        padding: 0 5px;
-        top: 0;
-        right: -10px;
-        width: 16px;
-        height: 16px;
+      justify-content: flex-end;
+      
+      .purchase {
+        display: flex;
+        position: relative;
+        padding-top: 15px;
+        padding-right: 40px;
+        .line {
+          width: 1px;
+          height: 20px;
+          background-color: black;
+          margin-left: 23px;
+          margin-right: 23px;
+          margin-top: 5px;
+        }
+        #items-count {
+          position: absolute;
+          display: block;
+          background-color: black;
+          color: white;
+          font-size: 0.7em;
+          border-radius: 100%;
+          padding: 0 5px;
+          top: 0;
+          right: -10px;
+          width: 16px;
+          height: 16px;
+        }
       }
     }
   }
@@ -216,19 +221,40 @@ header {
   }
 }
 
+@mixin background-image($image-url) {
+  background-image: url($image-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  h2 {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  h6 {
+    color: white;
+  }
+}
+
 main {
   //top main for all side pages
   .top-main {
     position: relative;
-    overflow: hidden;
     text-align: center;
-    span {
-      position: absolute;
-      top: 0%;
-      font-size: 50px;
-      color: white;
-      font-weight: bold;
-      text-transform: uppercase;
+    .top-image-shop {
+      @include background-image("/images/heading-pages-02.jpg");
+    }
+    .top-image-features {
+      @include background-image("/images/heading-pages-01.jpg");
+    }
+    .top-image-contact {
+      @include background-image("/images/heading-pages-06.jpg");
+    }
+    .top-image-blog {
+      @include background-image("/images/heading-pages-05.jpg");
+    }
+    .top-image-about {
+      @include background-image("/images/heading-pages-06.jpg");
     }
   }
   //top main ends
@@ -265,15 +291,15 @@ main {
               border-radius: 20px;
               padding: 10px 30px;
             }
-            > input{
+            > input {
               font-size: 14px;
               padding: 10px;
               width: 30%;
               margin: 20px;
             }
           }
-          
-          input{
+
+          input {
             border: 1px solid #e6e6e6;
           }
           .minus-plus {
@@ -307,37 +333,38 @@ main {
       margin-left: auto;
       .container {
         padding: 40px;
-        > div{
+        > div {
           padding: 20px 0;
         }
-        b{
+        b {
           width: 30%;
         }
-        span{
+        span {
           width: 70%;
         }
-        h4{
+        h4 {
           font-weight: 700;
           padding-bottom: 20px;
         }
-        .subtotal{
+        .subtotal {
           display: flex;
           border-bottom: 1px dotted #e6e6e6;
         }
-        .shipping{
+        .shipping {
           display: flex;
           border-bottom: 1px dotted #e6e6e6;
           div {
             display: flex;
             flex-direction: column;
             width: 70%;
-            input, select{
+            input,
+            select {
               border: 1px solid #e6e6e6;
               padding: 10px;
               margin: 10px 15px 10px 0;
               font-size: 14px;
             }
-            button{
+            button {
               outline: none;
               border: none;
               width: 80%;
@@ -347,13 +374,12 @@ main {
               padding: 10px;
             }
           }
-          
         }
-        .total{
+        .total {
           display: flex;
         }
-        .checkout{
-          button{
+        .checkout {
+          button {
             outline: none;
             border: none;
             width: 100%;
@@ -374,7 +400,7 @@ main {
       @include product-block();
     }
     .shop-side {
-      h4{
+      h4 {
         font-weight: 700;
       }
       ul {
@@ -387,10 +413,10 @@ main {
         border-top: 1px solid #e6e6e6;
         border-bottom: 1px solid #e6e6e6;
         padding: 40px 0;
-        div.fr{
+        div.fr {
           padding: 20px 0;
           display: flex;
-          button{
+          button {
             outline: none;
             border: none;
             background-color: black;
@@ -398,7 +424,6 @@ main {
             border-radius: 20px;
             padding: 0 15px;
             margin-right: 40px;
-
           }
         }
         #slider-range {
@@ -414,12 +439,12 @@ main {
           .ui-widget.ui-widget-content {
             border: none;
           }
-          .ui-corner-all {  
+          .ui-corner-all {
           }
         }
       }
-      .color{
-        li{
+      .color {
+        li {
           display: inline-block;
           border-radius: 100%;
           padding: 15px;
@@ -438,7 +463,6 @@ main {
       color: #888888;
       .img-container {
         position: relative;
-        overflow: hidden;
         padding-bottom: 20px;
         img {
           transform: scale(1);
@@ -554,7 +578,6 @@ main {
   //about starts here
   .our-story {
     .photo {
-      overflow: hidden;
       img {
         width: 100%;
         object-fit: cover;
@@ -793,7 +816,6 @@ main {
     }
     .block-items {
       position: relative;
-      overflow: hidden;
       img {
         object-fit: cover;
         width: 100%;
