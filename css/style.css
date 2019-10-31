@@ -30,6 +30,10 @@ a:hover {
   text-decoration: line-through;
 }
 
+header {
+  height: 125px;
+}
+
 header .wrapper-header {
   position: fixed;
   width: 100%;
