@@ -17,7 +17,16 @@ a {
 }
 
 a:hover {
-  color: red;
+  text-decoration: none;
+  background-color: none;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+a:hover > a {
+  color: rgba(228, 50, 50, 0.822);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .container img {
@@ -31,7 +40,7 @@ a:hover {
 }
 
 header {
-  height: 125px;
+  height: 110px;
 }
 
 header .wrapper-header {
@@ -81,8 +90,8 @@ header .wrapper-header .top-heading .exchange .email {
 header .wrapper-header .top-heading .exchange .options {
   display: none;
   position: absolute;
-  right: 9%;
-  top: 70%;
+  right: 8%;
+  top: 100%;
   z-index: 100;
 }
 
@@ -134,12 +143,36 @@ header .wrapper-header .main-heading .menu nav > ul .sub-menu {
 header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content {
   position: absolute;
   visibility: hidden;
-  top: 100%;
+  top: 90%;
   background-color: black;
+  font-weight: 700;
+  width: 225px;
+  padding: 10px 20px;
+  line-height: 2.5em;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content a {
+  color: white;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content a:hover {
+  background-color: none;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+header .wrapper-header .main-heading .menu nav > ul .sub-menu .sub-menu-content a:hover > a {
+  color: rgba(228, 50, 50, 0.822);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 header .wrapper-header .main-heading .menu nav > ul .sub-menu:hover .sub-menu-content {
   visibility: visible;
+  opacity: 1;
 }
 
 header .wrapper-header .active-user-bar {
@@ -775,27 +808,27 @@ main .form-section .form-send form button:hover {
   transition: 0.7s;
 }
 
-main .carousel {
+main .carousel-slide {
   color: white;
 }
 
-main .carousel > a .carousel-control-prev-icon,
-main .carousel > a .carousel-control-next-icon {
+main .carousel-slide > a .carousel-control-prev-icon,
+main .carousel-slide > a .carousel-control-next-icon {
   visibility: hidden;
 }
 
-main .carousel .carousel-item {
+main .carousel-slide .carousel-item {
   position: relative;
 }
 
-main .carousel .carousel-item .carousel-content {
+main .carousel-slide .carousel-item .carousel-content {
   position: absolute;
   top: 30%;
   left: 40%;
   text-align: center;
 }
 
-main .carousel .carousel-item .carousel-content h2 {
+main .carousel-slide .carousel-item .carousel-content h2 {
   font-size: 60px;
   line-height: 1.2em;
   letter-spacing: 3px;
@@ -803,19 +836,32 @@ main .carousel .carousel-item .carousel-content h2 {
   margin: 30px 0;
 }
 
-main .carousel .carousel-item .carousel-content span {
+main .carousel-slide .carousel-item .carousel-content span {
   font-size: 1.2em;
 }
 
-main .carousel .carousel-item .carousel-content .shop-now {
+main .carousel-slide .carousel-item .carousel-content .shop-now {
   border-radius: 20px;
   width: 35%;
   padding: 10px 20px;
   margin: auto;
+  background-color: white;
 }
 
-main .carousel .carousel-item .carousel-content .shop-now a {
+main .carousel-slide .carousel-item .carousel-content .shop-now a {
   color: black;
+}
+
+main .carousel-slide .carousel-item .carousel-content .shop-now:hover {
+  background-color: rgba(228, 50, 50, 0.822);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .carousel-slide .carousel-item .carousel-content .shop-now:hover > a {
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 main .carousel-slide:hover .carousel-control-prev-icon,
@@ -848,7 +894,19 @@ main .products .product-items .product-links {
   padding: 10px 30px;
   border-radius: 5px;
   bottom: 5%;
-  left: 33%;
+  left: 27%;
+}
+
+main .products .product-items .product-links:hover {
+  background-color: rgba(228, 50, 50, 0.822);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .products .product-items .product-links:hover > a {
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 main .products .product-items .sign-up {

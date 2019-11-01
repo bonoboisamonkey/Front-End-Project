@@ -1,6 +1,8 @@
 //variables
 $siteMainColor: #888888;
 $siteBGColor: #f5f5f5;
+$veryLightGray: #e6e6e6;
+$costomRed: rgba(228, 50, 50, 0.822);
 //general properties
 * {
   font-family: "Montserrat", sans-serif;
@@ -19,8 +21,18 @@ a {
   color: $siteMainColor;
 }
 
+@mixin hover($bgcolor, $color){
+  background-color: $bgcolor;
+  >a{
+    color: $color;
+    transition: 0.8s;
+  }
+  transition: 0.8s;
+}
+
 a:hover {
-  color: red;
+  text-decoration: none;
+  @include hover(none,$costomRed)
 }
 
 .container {
@@ -92,9 +104,10 @@ a:hover {
     }
   }
 }
+
 //----------------
 header {
-  height: 125px;
+  height: 110px;
   .wrapper-header {
     position: fixed;
     width: 100%;
@@ -131,8 +144,8 @@ header {
         .options {
           display: none;
           position: absolute;
-          right: 9%;
-          top: 70%;
+          right: 8%;
+          top: 100%;
           z-index: 100;
           span {
             display: block;
@@ -170,12 +183,25 @@ header {
               .sub-menu-content {
                 position: absolute;
                 visibility: hidden;
-                top: 100%;
+                top: 90%;
                 background-color: black;
+                font-weight: 700;
+                width: 225px;
+                padding: 10px 20px;
+                line-height: 2.5em;
+                opacity: 0;
+                transition: 0.8s;
+                a{
+                  color: white;
+                  &:hover{
+                    @include hover(none,$costomRed);
+                  }
+                }
               }
             }
             .sub-menu:hover .sub-menu-content {
               visibility: visible;
+              opacity: 1;
             }
           }
         }
@@ -643,7 +669,7 @@ main {
 
   //homepage starts here
 
-  .carousel {
+  .carousel-slide {
     color: white;
     > a {
       .carousel-control-prev-icon,
@@ -674,9 +700,13 @@ main {
           width: 35%;
           padding: 10px 20px;
           margin: auto;
+          background-color: white;
           a {
             color: black;
           }
+        }
+        .shop-now:hover{
+          @include hover($costomRed, white);
         }
       }
     }
@@ -709,7 +739,10 @@ main {
         padding: 10px 30px;
         border-radius: 5px;
         bottom: 5%;
-        left: 33%;
+        left: 27%;
+        &:hover{
+          @include hover($costomRed, white);
+        }
       }
       .sign-up {
         position: absolute;
