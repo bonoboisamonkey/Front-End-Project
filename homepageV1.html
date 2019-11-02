@@ -3,16 +3,14 @@
 
 <head>
   <title>Home</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Bootstrap CSS -->
   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -222,9 +220,9 @@
           <div class="block">
             <div class="image-container">
               <img src="images/item-02.jpg" alt="" />
-              <span class="badge bg-success">New</span>
+              <span class="badge new">New</span>
               <div class="image-overlay">
-                <button class="btn btn-dark animated fadeInUp delay-1s">
+                <button class="btn btn-dark">
                   Add to card
                 </button>
               </div>
@@ -236,7 +234,7 @@
             <div class="image-container">
               <img src="images/item-03.jpg" alt="" />
               <div class="image-overlay">
-                <button class="btn btn-dark animated fadeInUp delay-1s">
+                <button class="btn btn-dark">
                   Add to card
                 </button>
               </div>
@@ -248,7 +246,7 @@
             <div class="image-container">
               <img src="images/item-05.jpg" alt="" />
               <div class="image-overlay">
-                <button class="btn btn-dark animated fadeInUp delay-1s">
+                <button class="btn btn-dark">
                   Add to card
                 </button>
               </div>
@@ -259,9 +257,9 @@
           <div class="block">
             <div class="image-container">
               <img src="images/item-07.jpg" alt="" />
-              <span class="badge bg-danger">Sale</span>
+              <span class="badge sale">Sale</span>
               <div class="image-overlay">
-                <button class="btn btn-dark animated fadeInUp delay-1s">
+                <button class="btn btn-dark">
                   Add to card
                 </button>
               </div>
@@ -292,10 +290,10 @@
                 <a href="#">Gafas sol Hawkers one</a>
                 <span class="old-price">$29.50</span><span class="text-danger">$15.90</span>
                 <div class="countdown d-flex">
-                  <div>69 days</div>
-                  <div>07 hours</div>
-                  <div>12 mins</div>
-                  <div>45 secs</div>
+                  <div><span id="days"></span> days</div>
+                  <div><span id="hours"></span> hours</div>
+                  <div><span id="minutes"></span> mins</div>
+                  <div><span id="seconds"></span> secs</div>
                 </div>
               </div>
             </div>
@@ -308,9 +306,11 @@
         <h3>Our Blog</h3>
         <div class="row">
           <div class="col-md-4">
-            <img src="images/blog-01.jpg" alt="" />
+            <div class="image-container">
+              <img src="images/blog-01.jpg" alt="" />
+            </div>
             <h4>
-              <a href="">Black Friday Guide: Best Sales & Discount Codes</a>
+              <a href="/blog-details.html">Black Friday Guide: Best Sales & Discount Codes</a>
             </h4>
             <p>by <b>Nancy Ward</b> on <b>July 22,2017</b></p>
             <p>
@@ -320,9 +320,11 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img src="images/blog-02.jpg" alt="" />
+            <div class="image-container">
+              <img src="images/blog-02.jpg" alt="" />
+            </div>
             <h4>
-              <a href="">Black Friday Guide: Best Sales & Discount Codes</a>
+              <a href="/blog-details.html">Black Friday Guide: Best Sales & Discount Codes</a>
             </h4>
             <p>by <b>Nancy Ward</b> on <b>July 22,2017</b></p>
             <p>
@@ -332,9 +334,11 @@
             </p>
           </div>
           <div class="col-md-4">
-            <img src="images/blog-03.jpg" alt="" />
+            <div class="image-container">
+              <img src="images/blog-03.jpg" alt="" />
+            </div>
             <h4>
-              <a href="">Black Friday Guide: Best Sales & Discount Codes</a>
+              <a href="/blog-details.html">Black Friday Guide: Best Sales & Discount Codes</a>
             </h4>
             <p>by <b>Nancy Ward</b> on <b>July 22,2017</b></p>
             <p>
@@ -347,109 +351,107 @@
       </div>
     </section>
     <section class="instagram">
-      <div class="container-fluid">
-        <h2>@ follow us on Instagram</h2>
-        <div class="d-flex">
-          <div class="block-items">
-            <img src="images/gallery-03.jpg" alt="" />
-            <a href="#" class="overlay">
-              <i class="heart"></i>
-              <span>39</span>
-              <div>
-                <p>
-                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
-                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
-                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                  metus elit.
-                </p>
-                <span>Photo by @nancyward</span>
-              </div>
-            </a>
-          </div>
-          <div class="block-items">
-            <img src="images/gallery-07.jpg" alt="" />
-            <a href="#" class="overlay">
-              <i class="heart"></i>
-              <span>39</span>
-              <div>
-                <p>
-                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
-                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
-                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                  metus elit.
-                </p>
-                <span>Photo by @nancyward</span>
-              </div>
-            </a>
-          </div>
-          <div class="block-items">
-            <img src="images/gallery-09.jpg" alt="" />
-            <a href="#" class="overlay">
-              <i class="heart"></i>
-              <span>39</span>
-              <div>
-                <p>
-                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
-                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
-                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                  metus elit.
-                </p>
-                <span>Photo by @nancyward</span>
-              </div>
-            </a>
-          </div>
-          <div class="block-items">
-            <img src="images/gallery-13.jpg" alt="" />
-            <a href="#" class="overlay">
-              <i class="heart"></i>
-              <span>39</span>
-              <div>
-                <p>
-                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
-                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
-                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                  metus elit.
-                </p>
-                <span>Photo by @nancyward</span>
-              </div>
-            </a>
-          </div>
-          <div class="block-items">
-            <img src="images/gallery-15.jpg" alt="" />
-            <a href="#" class="overlay">
-              <i class="heart"></i>
-              <span>39</span>
-              <div>
-                <p>
-                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
-                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
-                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                  metus elit.
-                </p>
-                <span>Photo by @nancyward</span>
-              </div>
-            </a>
-          </div>
+      <h2>@ follow us on Instagram</h2>
+      <div class="d-flex">
+        <div class="block-items">
+          <img src="images/gallery-03.jpg" alt="" />
+          <a href="#" class="overlay">
+            <i class="heart"></i>
+            <span>39</span>
+            <div>
+              <p>
+                Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                metus elit.
+              </p>
+              <span>Photo by @nancyward</span>
+            </div>
+          </a>
         </div>
+        <div class="block-items">
+          <img src="images/gallery-07.jpg" alt="" />
+          <a href="#" class="overlay">
+            <i class="heart"></i>
+            <span>39</span>
+            <div>
+              <p>
+                Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                metus elit.
+              </p>
+              <span>Photo by @nancyward</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-items">
+          <img src="images/gallery-09.jpg" alt="" />
+          <a href="#" class="overlay">
+            <i class="heart"></i>
+            <span>39</span>
+            <div>
+              <p>
+                Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                metus elit.
+              </p>
+              <span>Photo by @nancyward</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-items">
+          <img src="images/gallery-13.jpg" alt="" />
+          <a href="#" class="overlay">
+            <i class="heart"></i>
+            <span>39</span>
+            <div>
+              <p>
+                Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                metus elit.
+              </p>
+              <span>Photo by @nancyward</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-items">
+          <img src="images/gallery-15.jpg" alt="" />
+          <a href="#" class="overlay">
+            <i class="heart"></i>
+            <span>39</span>
+            <div>
+              <p>
+                Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                metus elit.
+              </p>
+              <span>Photo by @nancyward</span>
+            </div>
+          </a>
+        </div>
+      </div>
       </div>
     </section>
     <section class="details">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-4">
-            <h4>Free Delivery Worldwide</h4>
-            <a href="#"><span>Click here for more info</span></a>
+            <h5>Free Delivery Worldwide</h5>
+            <a href="#"><i>Click here for more info</i></a>
           </div>
           <div class="col-md-4">
-            <h4>30 Days Return</h4>
-            <span>Simply return within 30 days for an exchange.</span>
+            <h5>30 Days Return</h5>
+            <i>Simply return within 30 days for an exchange.</i>
           </div>
           <div class="col-md-4">
-            <h4>Store Opening</h4>
-            <span>Shop open from Monday to Sunday</span>
+            <h5>Store Opening</h5>
+            <i>Shop open from Monday to Sunday</i>
           </div>
         </div>
-      </div>
     </section>
   </main>
   <footer>
@@ -457,7 +459,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="connection">
-            <h4><strong>Get in touch</strong></h4>
+            <h4>Get in touch</h4>
             <p>
               Any question? Let us know in store at 8th floor, 379 Hudson St,
               New York, NY 10018 or call us on (+1) 96 716 6879
@@ -520,15 +522,16 @@
         </div>
       </div>
     </div>
-    <div>
-      <a href="#"><img src="images/icons/paypal.png" alt="" /></a>
-      <a href="#"><img src="images/icons/visa.png" alt="" /></a>
-      <a href="#"><img src="images/icons/mastercard.png" alt="" /></a>
-      <a href="#"><img src="images/icons/express.png" alt="" /></a>
+    <div class="banks">
+      <a href="https://www.paypal.com"><img src="images/icons/paypal.png" alt="" /></a>
+      <a href="https://usa.visa.com/"><img src="images/icons/visa.png" alt="" /></a>
+      <a href="https://www.mastercard.us/"><img src="images/icons/mastercard.png" alt="" /></a>
+      <a href="https://www.americanexpress.com/"><img src="images/icons/express.png" alt="" /></a>
       <a href="#"><img src="images/icons/discover.png" alt="" /></a>
       <div>Copyright © 2017 Colorlib. All rights reserved.</div>
     </div>
   </footer>
+  <div id="button2top"><span class="fa fa-angle-double-up"></span></div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
@@ -541,6 +544,41 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="javascript/main.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        items: 4
+      });
+      setInterval(function () {
+        var endTime = new Date("12 January 2020 0:00:00");
+        endTime = (Date.parse(endTime) / 1000);
+
+        var now = new Date();
+        now = (Date.parse(now) / 1000);
+
+        var timeLeft = endTime - now;
+
+        var days = Math.floor(timeLeft / 86400);
+        var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+        var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+        if (hours < "10") { hours = "0" + hours; }
+        if (minutes < "10") { minutes = "0" + minutes; }
+        if (seconds < "10") { seconds = "0" + seconds; }
+
+        $("#days").html(days);
+        $("#hours").html(hours);
+        $("#minutes").html(minutes);
+        $("#seconds").html(seconds);
+
+      }, 1000);
+    })
+  </script>
 </body>
 
 </html>
