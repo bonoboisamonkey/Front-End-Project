@@ -3,6 +3,7 @@ $siteMainColor: #555;
 $siteBGColor: #f5f5f5;
 $veryLightGray: #e6e6e6;
 $costomRed: #e65540;
+$lightGray: #d9d9d9;
 //general properties
 * {
   font-family: "Montserrat", sans-serif;
@@ -267,7 +268,7 @@ header {
     padding: 10px;
   }
 }
-
+  
 @mixin background-image($image-url) {
   background-image: url($image-url);
   background-position: center;
@@ -317,7 +318,7 @@ main {
       thead {
         td {
           font-weight: 700;
-          &:nth-child(2){
+          &:nth-child(2) {
             width: 30%;
           }
         }
@@ -338,7 +339,7 @@ main {
               color: white;
               border-radius: 20px;
               padding: 10px 30px;
-              &:hover{
+              &:hover {
                 @include hover($costomRed, white);
               }
             }
@@ -352,27 +353,6 @@ main {
 
           input {
             border: 2px solid #e6e6e6;
-          }
-          .minus-plus {
-            display: flex;
-            width: 40%;
-            background-color: #e6e6e6;
-            input {
-              text-align: center;
-              width: 40%;
-              outline: none;
-              border: 2px solid #e6e6e6;
-              margin: 0;
-              padding: 0;
-            }
-            button {
-              outline: none;
-              border: none;
-              padding: 10px;
-              width: 30%;
-              background-color: #e6e6e6;
-              color: black;
-            }
           }
         }
       }
@@ -423,7 +403,7 @@ main {
               color: white;
               border-radius: 20px;
               padding: 10px;
-              &:hover{
+              &:hover {
                 @include hover($costomRed, white);
               }
             }
@@ -441,7 +421,7 @@ main {
             color: white;
             border-radius: 20px;
             padding: 10px;
-            &:hover{
+            &:hover {
               @include hover($costomRed, white);
             }
           }
@@ -484,7 +464,7 @@ main {
             text-transform: uppercase;
             font-size: 13px;
           }
-          span{
+          span {
             color: $siteMainColor;
             padding-top: 2px;
             padding-right: 2px;
@@ -502,11 +482,11 @@ main {
             height: 20%;
             top: 40%;
           }
-          .ui-state-active{
+          .ui-state-active {
             border: none;
           }
         }
-        .ui-widget.ui-widget-content{
+        .ui-widget.ui-widget-content {
           border: none;
         }
       }
@@ -518,16 +498,16 @@ main {
           cursor: pointer;
         }
       }
-      .search{
+      .search {
         width: 100%;
         border: 1px solid $veryLightGray;
         display: flex;
         padding: 15px;
-        input{
-          border:none;
-          outline:none;
+        input {
+          border: none;
+          outline: none;
           width: 90%;
-          &::placeholder{
+          &::placeholder {
             color: $siteMainColor;
             font-size: 14px;
           }
@@ -541,32 +521,34 @@ main {
   .blog {
     padding: 60px 0;
     .blog-post {
-      padding-bottom: 80px;
+      padding-bottom: 50px;
+      padding-right: 50px;
       color: #888888;
       .img-container {
         position: relative;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
         img {
           transform: scale(1);
           transition: 0.4s;
-          width: 100%;
         }
         span {
           position: absolute;
-          bottom: 5%;
+          bottom: 30px;
           left: 0;
           background-color: black;
           color: white;
           padding: 5px 10px;
         }
       }
-      .img:hover {
+      .img-container:hover {
         img {
           transform: scale(1.1);
         }
       }
       h2 {
         padding: 15px 0;
+        margin: 15px 0;
         a {
           color: black;
           &:hover {
@@ -581,11 +563,10 @@ main {
       }
     }
     aside {
-      padding-left: 50px;
       .input-group {
         margin-bottom: 40px;
         padding: 5px;
-        border: 1px solid #888888;
+        border: 1px solid $lightGray;
         border-radius: 20px;
         button,
         input {
@@ -599,11 +580,11 @@ main {
       }
       .categories {
         li:first-child {
-          border-top: 1px solid #888888;
+          border-top: 1px solid $lightGray;
         }
         li {
           padding: 10px 0;
-          border-bottom: 1px solid #888888;
+          border-bottom: 1px solid $lightGray;
         }
         padding-bottom: 40px;
       }
@@ -612,6 +593,7 @@ main {
         li {
           display: flex;
           padding-bottom: 10px;
+          padding-right: 0;
           > a {
             display: block;
             width: 50%;
@@ -621,6 +603,8 @@ main {
           }
           div {
             padding-left: 20px;
+            font-size: 15px;
+            line-height: 1.2;
             a {
               display: block;
               width: 80%;
@@ -637,24 +621,158 @@ main {
           }
         }
       }
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        span {
-          border: 1px solid #888888;
-          padding: 5px 10px;
-          border-radius: 15px;
-          margin-right: 5px;
-          margin-bottom: 5px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      padding-bottom: 40px;
+      b {
+        padding: 6px 15px 6px 0;
+      }
+      span {
+        border: 1px solid #888888;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+    //blog details some new css
+
+    .form-send {
+      h4 {
+        padding-bottom: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+        padding-bottom: 40px;
+        color: $siteMainColor;
+      }
+      form {
+        .form-control::placeholder {
+          font-size: 13px;
+          padding: 50px;
+        }
+        input {
+          width: 280px;
+          height: 50px;
+        }
+        button {
+          outline: none;
+          border: none;
+          background-color: black;
+          color: white;
+          border-radius: 20px;
+          padding: 10px 30px;
+          margin-top: 20px;
+          text-transform: uppercase;
+          &:hover {
+            @include hover($costomRed, white);
+          }
         }
       }
     }
+    // blog details new things end here
   }
 
   //product details starts
-
+  .pro-details{
+   .product-info{
+     padding-left: 30px;
+    >span{
+      font-size: 30px;
+    }
+    p{
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .dropdown{
+      .label{
+        margin:auto;
+        text-align: center;
+        
+      }
+      >button{
+        display: block;
+        width: 80%;
+        text-align: left;
+      }
+    }
+    .add-to-cart{
+      justify-content: flex-end;
+      width: 100%;
+      >button {
+        outline: none;
+        border: none;
+        width: 30%;
+        margin: 20px;
+        margin-right: 50px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding: 10px;
+        &:hover {
+          @include hover($costomRed, white);
+        }
+      }
+      .minus-plus{
+        margin:auto 40px auto auto;
+        width: 25%;
+      }
+    }
+    .staff-details{
+      padding-bottom: 45px;
+      font-size: 14px;
+    }
+    .accordion{
+      .card-header{
+        background-color: white;
+        border: none;
+      }
+    }
+   }
+  }
   //product details ends
 
+  .minus-plus {
+    display: flex;
+    width: 40%;
+    background-color: #e6e6e6;
+    input {
+      text-align: center;
+      width: 40%;
+      outline: none;
+      border: 2px solid #e6e6e6;
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      outline: none;
+      border: none;
+      padding: 10px;
+      width: 30%;
+      background-color: #e6e6e6;
+      color: black;
+    }
+  }
+
+  nav{
+    padding-left: 50px;
+    .breadcrumb{
+      background-color: white;
+      font-size: 13px;
+      i{
+        padding-left: 20px;
+      }
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "";
+  }
   //blog ends here
 
   //about starts here
@@ -943,13 +1061,13 @@ main {
           color: #333333;
         }
       }
-      .image-container{
+      .image-container {
         overflow: hidden;
-        img{
-        transition: 0.7s;
-        transform: scale(1);
+        img {
+          transition: 0.7s;
+          transform: scale(1);
         }
-        &:hover img{
+        &:hover img {
           transform: scale(1.1);
         }
       }
@@ -996,17 +1114,17 @@ main {
     .col-md-4 {
       text-align: center;
       padding: 15px;
-      h5{
+      h5 {
         color: $siteMainColor;
       }
-      i{
+      i {
         color: #555555;
         font-size: 15px;
       }
     }
     .col-md-4:nth-child(2) {
       border-right: 1px solid $veryLightGray;
-      border-left: 1px  solid $veryLightGray;
+      border-left: 1px solid $veryLightGray;
     }
   }
 }
@@ -1023,7 +1141,7 @@ footer {
   }
   .connection {
     padding: 70px 40px;
-    p{
+    p {
       font-size: 13px;
       max-width: 450px;
     }
@@ -1066,17 +1184,17 @@ footer {
         color: white;
       }
       &:hover {
-        @include hover($costomRed,white);
+        @include hover($costomRed, white);
       }
     }
   }
-  .banks{
+  .banks {
     text-align: center;
-    a{
+    a {
       display: inline-block;
       padding: 20px 0;
     }
-    div{
+    div {
       padding-bottom: 40px;
       font-size: 14px;
       color: #888;
@@ -1084,7 +1202,7 @@ footer {
   }
 }
 
-#button2top{
+#button2top {
   position: fixed;
   background-color: black;
   opacity: 0.5;
@@ -1095,12 +1213,12 @@ footer {
   display: flex;
   border-radius: 5px;
   cursor: pointer;
-  span{
+  span {
     margin: auto;
     text-align: center;
     color: white;
   }
-  &:hover{
+  &:hover {
     @include hover($costomRed, white);
     opacity: 0.8;
   }

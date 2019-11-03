@@ -358,32 +358,6 @@ main .coupon table tbody tr input {
   border: 2px solid #e6e6e6;
 }
 
-main .coupon table tbody tr .minus-plus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40%;
-  background-color: #e6e6e6;
-}
-
-main .coupon table tbody tr .minus-plus input {
-  text-align: center;
-  width: 40%;
-  outline: none;
-  border: 2px solid #e6e6e6;
-  margin: 0;
-  padding: 0;
-}
-
-main .coupon table tbody tr .minus-plus button {
-  outline: none;
-  border: none;
-  padding: 10px;
-  width: 30%;
-  background-color: #e6e6e6;
-  color: black;
-}
-
 main .coupon .cart-totals {
   border: 1px solid #e6e6e6;
   width: 40%;
@@ -717,13 +691,15 @@ main .blog {
 }
 
 main .blog .blog-post {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
+  padding-right: 50px;
   color: #888888;
 }
 
 main .blog .blog-post .img-container {
   position: relative;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 main .blog .blog-post .img-container img {
@@ -731,25 +707,25 @@ main .blog .blog-post .img-container img {
           transform: scale(1);
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  width: 100%;
 }
 
 main .blog .blog-post .img-container span {
   position: absolute;
-  bottom: 5%;
+  bottom: 30px;
   left: 0;
   background-color: black;
   color: white;
   padding: 5px 10px;
 }
 
-main .blog .blog-post .img:hover img {
+main .blog .blog-post .img-container:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 main .blog .blog-post h2 {
   padding: 15px 0;
+  margin: 15px 0;
 }
 
 main .blog .blog-post h2 a {
@@ -767,14 +743,10 @@ main .blog .blog-post .description {
   font-size: 15px;
 }
 
-main .blog aside {
-  padding-left: 50px;
-}
-
 main .blog aside .input-group {
   margin-bottom: 40px;
   padding: 5px;
-  border: 1px solid #888888;
+  border: 1px solid #d9d9d9;
   border-radius: 20px;
 }
 
@@ -794,12 +766,12 @@ main .blog aside .categories {
 }
 
 main .blog aside .categories li:first-child {
-  border-top: 1px solid #888888;
+  border-top: 1px solid #d9d9d9;
 }
 
 main .blog aside .categories li {
   padding: 10px 0;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 main .blog aside .feat-pro {
@@ -811,6 +783,7 @@ main .blog aside .feat-pro li {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 10px;
+  padding-right: 0;
 }
 
 main .blog aside .feat-pro li > a {
@@ -824,6 +797,8 @@ main .blog aside .feat-pro li > a img {
 
 main .blog aside .feat-pro li div {
   padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 main .blog aside .feat-pro li div a {
@@ -840,20 +815,200 @@ main .blog aside .archive li span {
   color: #888888;
 }
 
-main .blog aside .tags {
+main .blog .tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-size: 14px;
+  padding-bottom: 40px;
 }
 
-main .blog aside .tags span {
+main .blog .tags b {
+  padding: 6px 15px 6px 0;
+}
+
+main .blog .tags span {
   border: 1px solid #888888;
   padding: 5px 10px;
   border-radius: 15px;
   margin-right: 5px;
   margin-bottom: 5px;
+}
+
+main .blog .form-send h4 {
+  padding-bottom: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+main .blog .form-send p {
+  font-size: 13px;
+  line-height: 1.8;
+  padding-bottom: 40px;
+  color: #555;
+}
+
+main .blog .form-send form .form-control::-webkit-input-placeholder {
+  font-size: 13px;
+  padding: 50px;
+}
+
+main .blog .form-send form .form-control:-ms-input-placeholder {
+  font-size: 13px;
+  padding: 50px;
+}
+
+main .blog .form-send form .form-control::-ms-input-placeholder {
+  font-size: 13px;
+  padding: 50px;
+}
+
+main .blog .form-send form .form-control::placeholder {
+  font-size: 13px;
+  padding: 50px;
+}
+
+main .blog .form-send form input {
+  width: 280px;
+  height: 50px;
+}
+
+main .blog .form-send form button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+main .blog .form-send form button:hover {
+  background-color: #e65540;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .blog .form-send form button:hover > a {
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .pro-details .product-info {
+  padding-left: 30px;
+}
+
+main .pro-details .product-info > span {
+  font-size: 30px;
+}
+
+main .pro-details .product-info p {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+main .pro-details .product-info .dropdown .label {
+  margin: auto;
+  text-align: center;
+}
+
+main .pro-details .product-info .dropdown > button {
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+
+main .pro-details .product-info .add-to-cart {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+main .pro-details .product-info .add-to-cart > button {
+  outline: none;
+  border: none;
+  width: 30%;
+  margin: 20px;
+  margin-right: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+main .pro-details .product-info .add-to-cart > button:hover {
+  background-color: #e65540;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .pro-details .product-info .add-to-cart > button:hover > a {
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .pro-details .product-info .add-to-cart .minus-plus {
+  margin: auto 40px auto auto;
+  width: 25%;
+}
+
+main .pro-details .product-info .staff-details {
+  padding-bottom: 45px;
+  font-size: 14px;
+}
+
+main .pro-details .product-info .accordion .card-header {
+  background-color: white;
+  border: none;
+}
+
+main .minus-plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  background-color: #e6e6e6;
+}
+
+main .minus-plus input {
+  text-align: center;
+  width: 40%;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+
+main .minus-plus button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 30%;
+  background-color: #e6e6e6;
+  color: black;
+}
+
+main nav {
+  padding-left: 50px;
+}
+
+main nav .breadcrumb {
+  background-color: white;
+  font-size: 13px;
+}
+
+main nav .breadcrumb i {
+  padding-left: 20px;
+}
+
+main .breadcrumb-item + .breadcrumb-item::before {
+  content: "";
 }
 
 main .our-story .photo img {

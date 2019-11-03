@@ -49,4 +49,22 @@ $(document).ready(function () {
     $(".overlay", this).css({ "diplay": "none", "opacity": "0" });
     $(".overlay div", this).removeClass("animated fadeInUp")
   })
+
+  if(sessionStorage.getItem("count")==null){
+    console.log("he")
+    $("#items-count").text("0");
+  }else{
+    console.log("yox")
+    $("#items-count").text(sessionStorage.getItem("count"));
+  }
+  $("button").click(function(){
+    let text = $.trim($(this).text());
+    if(text=="Add to card"){
+      let count = parseInt($("#items-count").text());
+      count++;
+      sessionStorage.setItem("count", count);
+      $("#items-count").text(sessionStorage.getItem("count"));
+    }
+  })
+
 });
