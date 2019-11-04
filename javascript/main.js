@@ -55,21 +55,21 @@ $(document).ready(function () {
     $(".overlay div", this).removeClass("animated fadeInUp")
   })
 
-  if(sessionStorage.getItem("count")==null){
+  if (sessionStorage.getItem("count") == null || isNaN(sessionStorage.getItem("count"))) {
     console.log("he")
     $("#items-count").text("0");
     $("#items-count-h2").text("0");
     $(".minus-plus input").val("0");
-  }else{
+  } else {
     console.log("yox")
     $("#items-count").text(sessionStorage.getItem("count"));
     $("#items-count-h2").text(sessionStorage.getItem("count"));
     let key = sessionStorage.getItem("count");
     $(".minus-plus input").val(key);
   }
-  $("button").click(function(){
+  $("button").click(function () {
     let text = $.trim($(this).text());
-    if(text=="Add to card" || $(this).attr("value")=="+"){
+    if (text == "Add to card" || $(this).attr("value") == "+") {
       let count = parseInt($("#items-count").text());
       count = parseInt($("#items-count-h2").text());
       count++;
@@ -78,7 +78,7 @@ $(document).ready(function () {
       $("#items-count-h2").text(sessionStorage.getItem("count"));
       let key = sessionStorage.getItem("count");
       $(this).prev().val(key);
-    }else if($(this).attr("value")=="-"){
+    } else if ($(this).attr("value") == "-") {
       let count = parseInt($("#items-count").text());
       count = parseInt($("#items-count-h2").text());
       count--;
@@ -89,7 +89,7 @@ $(document).ready(function () {
       $(this).next().val(key);
     }
 
-    if(text=="Add to card"){
+    if (text == "Add to card") {
       Swal.fire(
         'Item Added to Your List!',
         'Go to Features page to costimize your list',
