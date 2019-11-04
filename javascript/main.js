@@ -58,12 +58,10 @@ $(document).ready(function () {
   if (sessionStorage.getItem("count") == null || isNaN(sessionStorage.getItem("count"))) {
     console.log("he")
     $("#items-count").text("0");
-    $("#items-count-h2").text("0");
     $(".minus-plus input").val("0");
   } else {
     console.log("yox")
     $("#items-count").text(sessionStorage.getItem("count"));
-    $("#items-count-h2").text(sessionStorage.getItem("count"));
     let key = sessionStorage.getItem("count");
     $(".minus-plus input").val(key);
   }
@@ -71,20 +69,16 @@ $(document).ready(function () {
     let text = $.trim($(this).text());
     if (text == "Add to card" || $(this).attr("value") == "+") {
       let count = parseInt($("#items-count").text());
-      count = parseInt($("#items-count-h2").text());
       count++;
       sessionStorage.setItem("count", count);
       $("#items-count").text(sessionStorage.getItem("count"));
-      $("#items-count-h2").text(sessionStorage.getItem("count"));
       let key = sessionStorage.getItem("count");
       $(this).prev().val(key);
     } else if ($(this).attr("value") == "-") {
       let count = parseInt($("#items-count").text());
-      count = parseInt($("#items-count-h2").text());
       count--;
       sessionStorage.setItem("count", count);
       $("#items-count").text(sessionStorage.getItem("count"));
-      $("#items-count-h2").text(sessionStorage.getItem("count"));
       let key = sessionStorage.getItem("count");
       $(this).next().val(key);
     }
