@@ -128,7 +128,7 @@ a:hover {
 }
 
 //----------------
-header {
+header, #h2 {
   height: 110px;
   .wrapper-header {
     position: fixed;
@@ -232,33 +232,7 @@ header {
     .active-user-bar {
       display: flex;
       justify-content: flex-end;
-      .purchase {
-        display: flex;
-        position: relative;
-        padding-top: 15px;
-        padding-right: 40px;
-        .line {
-          width: 1px;
-          height: 20px;
-          background-color: black;
-          margin-left: 23px;
-          margin-right: 23px;
-          margin-top: 5px;
-        }
-        #items-count {
-          position: absolute;
-          display: block;
-          background-color: black;
-          color: white;
-          font-size: 0.7em;
-          border-radius: 100%;
-          padding: 0 5px;
-          top: 15px;
-          right: 30px;
-          width: 16px;
-          height: 16px;
-        }
-      }
+      
     }
   }
   .wrapper-header-red {
@@ -267,8 +241,38 @@ header {
     color: white;
     padding: 10px;
   }
+
+  .purchase {
+    display: flex;
+    position: relative;
+    padding-top: 15px;
+    padding-right: 40px;
+    .line {
+      width: 1px;
+      height: 20px;
+      background-color: black;
+      margin-left: 23px;
+      margin-right: 23px;
+      margin-top: 5px;
+    }
+    #items-count, #items-count-h2{
+      position: absolute;
+      display: block;
+      background-color: black;
+      color: white;
+      font-size: 0.7em;
+      border-radius: 100%;
+      padding: 2px 4px;
+      top: 15px;
+      right: 30px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
-  
+.height{
+  height:0;
+}
 @mixin background-image($image-url) {
   background-image: url($image-url);
   background-position: center;
@@ -384,7 +388,7 @@ main {
         .shipping {
           display: flex;
           border-bottom: 1px dotted #e6e6e6;
-          div {
+          div.ship {
             display: flex;
             flex-direction: column;
             width: 70%;
@@ -395,7 +399,7 @@ main {
               margin: 10px 15px 10px 0;
               font-size: 14px;
             }
-            button {
+            > button {
               outline: none;
               border: none;
               width: 80%;
@@ -435,6 +439,7 @@ main {
   .container {
     .our-products {
       @include product-block();
+
     }
     .shop-side {
       h4 {
@@ -778,6 +783,7 @@ main {
   //about starts here
   .our-story {
     .photo {
+      overflow: hidden;
       img {
         width: 100%;
         object-fit: cover;
@@ -841,6 +847,25 @@ main {
   }
   //contacts end here
 
+  //dorpdown for all
+
+  .dropdown{
+    .btn{
+      box-shadow: none;
+      border: 1px solid $lightGray;
+      color: $siteMainColor;
+      font-size: 14px;
+    }
+    .dropdown-menu{
+      a:hover{
+        background-color: $costomRed;
+        color: white;
+      }
+    }
+  }
+
+  //dropdown ends
+
   //homepage starts here
 
   .carousel-slide {
@@ -857,8 +882,9 @@ main {
       .carousel-content {
         position: absolute;
         top: 30%;
-        left: 40%;
+        left: 30%;
         text-align: center;
+        width: 40%;
         h2 {
           font-size: 60px;
           line-height: 1.2em;
@@ -916,7 +942,7 @@ main {
         background-color: rgba(255, 255, 255, 1);
         border-radius: 5px;
         bottom: 5%;
-        left: 23%;
+        left: 22%;
         a {
           color: black;
         }
@@ -1033,6 +1059,24 @@ main {
       background-repeat: no-repeat;
       height: 500px;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img-content{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        h3 {
+          font-size: 50px;
+        }
+        button#play{
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: white;
+        }
+      }
     }
   }
   // homepage 2 end

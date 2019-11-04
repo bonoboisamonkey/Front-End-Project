@@ -22,10 +22,15 @@ $(document).ready(function () {
     ) {
       $(".top-heading").addClass("d-none");
       $("#button2top").removeClass("d-none");
-
+      $("#h1 .main-heading").addClass("d-none");
+      $("#h2").removeClass("d-none");
+      $("#h1").addClass("height");
     } else {
       $(".top-heading").removeClass("d-none");
       $("#button2top").addClass("d-none");
+      $("#h1 .main-heading").removeClass("d-none");
+      $("#h2").addClass("d-none");
+      $("#h1").removeClass("height");
     }
   });
 
@@ -53,18 +58,51 @@ $(document).ready(function () {
   if(sessionStorage.getItem("count")==null){
     console.log("he")
     $("#items-count").text("0");
+    $("#items-count-h2").text("0");
+    $(".minus-plus input").val("0");
   }else{
     console.log("yox")
     $("#items-count").text(sessionStorage.getItem("count"));
+    $("#items-count-h2").text(sessionStorage.getItem("count"));
+    let key = sessionStorage.getItem("count");
+    $(".minus-plus input").val(key);
   }
   $("button").click(function(){
     let text = $.trim($(this).text());
-    if(text=="Add to card"){
+    if(text=="Add to card" || $(this).attr("value")=="+"){
       let count = parseInt($("#items-count").text());
+      count = parseInt($("#items-count-h2").text());
       count++;
       sessionStorage.setItem("count", count);
       $("#items-count").text(sessionStorage.getItem("count"));
+      $("#items-count-h2").text(sessionStorage.getItem("count"));
+      let key = sessionStorage.getItem("count");
+      $(this).prev().val(key);
+    }else if($(this).attr("value")=="-"){
+      let count = parseInt($("#items-count").text());
+      count = parseInt($("#items-count-h2").text());
+      count--;
+      sessionStorage.setItem("count", count);
+      $("#items-count").text(sessionStorage.getItem("count"));
+      $("#items-count-h2").text(sessionStorage.getItem("count"));
+      let key = sessionStorage.getItem("count");
+      $(this).next().val(key);
+    }
+
+    if(text=="Add to card"){
+      Swal.fire(
+        'Item Added to Your List!',
+        'Go to Features page to costimize your list',
+        'info'
+      )
     }
   })
+
+  $('#play').click(() => {
+    Swal.fire(
+      'Commercial video',
+      '<iframe width="100%" height="300" src="https://www.youtube.com/embed/Nt8ZrWY2Cmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+  });
 
 });

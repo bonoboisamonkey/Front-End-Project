@@ -14,6 +14,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css"
+        integrity="sha256-2bAj1LMT7CXUYUwuEnqqooPb1W0Sw0uKMsqNH0HwMa4=" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -166,14 +168,30 @@
                 <div class="col-md-9">
                     <section class="our-products">
                         <div class="container">
-                            <div class="top">
-                                <select name="" id="">
-                                    <option value="">Default sorting</option>
-                                </select>
-                                <select name="" id="">
-                                    <option value="">Price</option>
-                                </select>
-                                <span>Showing 1–12 of 16 results</span>
+                            <div class="top d-flex">
+                                <div class="dropdown mr-2 pb-5">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Default sorting
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Popularity</a>
+                                        <a class="dropdown-item" href="#">high to low</a>
+                                        <a class="dropdown-item" href="#">low to high</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Price
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">0.00$ - 50.00$</a>
+                                        <a class="dropdown-item" href="#">100.00$ - 200.00$</a>
+                                        <a class="dropdown-item" href="#">200.00$ - 400.00$</a>
+                                    </div>
+                                </div>
+                                <div style="text-align: right; width: 100%">Showing 1–12 of 16 results</div>
                             </div>
                             <div class="catalog ">
                                 <div class="row ">
@@ -428,6 +446,8 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"
+        integrity="sha256-2RS1U6UNZdLS0Bc9z2vsvV4yLIbJNKxyA4mrx5uossk=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             $("#slider-range").slider({

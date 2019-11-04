@@ -8,26 +8,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Bootstrap CSS -->
   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css"
+    integrity="sha256-2bAj1LMT7CXUYUwuEnqqooPb1W0Sw0uKMsqNH0HwMa4=" crossorigin="anonymous" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-  integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-<link rel="stylesheet" href="css/style.css" />
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .top-heading .row .col-md-4 .social-media {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .top-heading .row .col-md-4 .exchange {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .top-heading .row .col-md-4 .exchange .options {
+      right: 28%;
+      top: 80%;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
+  <header id="h1">
     <div class="wrapper-header-red">
       <span>20% off everything! Shop Now</span>
     </div>
     <div class="wrapper-header">
       <div class="top-heading">
-        <div class="row" style="margin:0">
+        <div class="row">
           <div class="col-md-4">
             <ul class="social-media">
               <li>
@@ -52,8 +71,8 @@
               <a href="/homepageV2.html"><img src="images/logo.png" alt="logo" /></a>
             </div>
           </div>
-          <div class="col-md-4 d-flex justify-content-end" style="padding-top: 15px; padding-right:40px;">
-            <div class="exchange">
+          <div class="col-md-4 d-flex justify-content-end">
+            <div class="exchange d-flex">
               <span class="email"> fashe@example.com</span>
               <div id="lang">
                 USD
@@ -79,10 +98,10 @@
               <li class="sub-menu">
                 <a href="/homepageV1.html">Home</a>
                 <ul class="sub-menu-content">
-                  <li><a href="/homepageV1.html">HomeV1</a></li>
-                  <li><a href="/homepageV2.html">HomeV2</a></li>
-                  <li><a href="/homepageV3.html">HomeV3</a></li>
-                </ul>
+                    <li><a href="/homepageV1.html">HomepageV1</a></li>
+                    <li><a href="/homepageV2.html">HomepageV2</a></li>
+                    <li><a href="/homepageV3.html">HomepageV3</a></li>
+                  </ul>
               </li>
               <li>
                 <a href="/shop.html">Shop</a>
@@ -104,6 +123,63 @@
               </li>
             </ul>
           </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <header id="h2" class="d-none">
+    <div class="wrapper-header">
+      <div class="main-heading">
+        <div class="row m-0">
+          <div class="col-md-4">
+            <div class="logo">
+              <a href="/homepageV1.html"><img src="images/logo.png" alt="logo" /></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu">
+              <nav>
+                <ul>
+                  <li class="sub-menu">
+                    <a href="/homepageV1.html">Home</a>
+                    <ul class="sub-menu-content">
+                      <li><a href="/homepageV1.html">HomepageV1</a></li>
+                      <li><a href="/homepageV2.html">HomepageV2</a></li>
+                      <li><a href="/homepageV3.html">HomepageV3</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="/shop.html">Shop</a>
+                  </li>
+                  <li>
+                    <a href="/shop.html" class="text-danger">Sale</a>
+                  </li>
+                  <li>
+                    <a href="/features.html">Features</a>
+                  </li>
+                  <li>
+                    <a href="/blog.html">Blog</a>
+                  </li>
+                  <li>
+                    <a href="/about.html">About</a>
+                  </li>
+                  <li>
+                    <a href="/contact.html">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="active-user-bar">
+              <div class="purchase">
+                <a href="#"><img src="images/icons/icon-header-01.png" alt="account-icon" /></a>
+                <span class="line"></span>
+                <a href="#"><img src="images/icons/icon-header-02.png" alt="account-icon" /></a>
+                <span id="items-count-h2">0</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -298,7 +374,13 @@
       </div>
     </section>
     <section class="lookbook">
-      <div class="fixed-image"></div>
+      <div class="fixed-image">
+        <div class="img-content">
+          <span>The Beauty</span>
+          <h3>Lookbook</h3>
+          <button id="play"><i class="fa fa-play"></i> Play Video</button>
+        </div>
+      </div>
     </section>
     <section class="our-blog">
       <div class="container">
@@ -541,7 +623,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
     crossorigin="anonymous "></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"
+    integrity="sha256-2RS1U6UNZdLS0Bc9z2vsvV4yLIbJNKxyA4mrx5uossk=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
   <script src="javascript/main.js"></script>
 </body>
