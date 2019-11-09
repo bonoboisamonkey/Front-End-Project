@@ -99,4 +99,21 @@ $(document).ready(function () {
     )
   });
 
+  $("#user").click(function(){
+    let display = $("#login").attr("class");
+    if(display=="d-none"){
+      $("#login").removeClass("d-none");
+    }else{
+      $("#login").addClass("d-none");
+    }
+  })
+
+  $(".icon").click(function(){
+    let classname = $(".menu").attr("class");
+    if(classname=="menu"){
+      $(".menu").addClass("responsive");
+    }else{
+      $(".menu").removeClass("responsive");
+    }
+  })
 });

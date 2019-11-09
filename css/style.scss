@@ -128,7 +128,8 @@ a:hover {
 }
 
 //----------------
-header, #h2 {
+header,
+#h2 {
   height: 110px;
   .wrapper-header {
     position: fixed;
@@ -232,7 +233,6 @@ header, #h2 {
     .active-user-bar {
       display: flex;
       justify-content: flex-end;
-      
     }
   }
   .wrapper-header-red {
@@ -255,7 +255,7 @@ header, #h2 {
       margin-right: 23px;
       margin-top: 5px;
     }
-    #items-count, #items-count-h2{
+    #items-count {
       position: absolute;
       display: block;
       background-color: black;
@@ -263,6 +263,7 @@ header, #h2 {
       font-size: 0.7em;
       border-radius: 100%;
       padding: 2px 4px;
+      text-align: center;
       top: 15px;
       right: 30px;
       width: 20px;
@@ -270,9 +271,11 @@ header, #h2 {
     }
   }
 }
-.height{
-  height:0;
+
+.height {
+  height: 0;
 }
+
 @mixin background-image($image-url) {
   background-image: url($image-url);
   background-position: center;
@@ -285,6 +288,56 @@ header, #h2 {
   }
   h6 {
     color: white;
+  }
+}
+
+a.icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .menu {
+    nav.oldmenu {
+        display: none;
+    }
+    a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  .responsive {
+    position: relative;
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    div.mobile-menu {
+      display: flex;
+      ul {
+        width: 100%;
+        li {
+          flex-direction: column;
+          background-color: $costomRed;
+          padding: 10px;
+          a{
+            color: white;
+          }
+        }
+        .sub-menu{
+          ul{
+            display: none;
+          }
+          .down{
+            position: absolute;
+            right: 25px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -439,7 +492,6 @@ main {
   .container {
     .our-products {
       @include product-block();
-
     }
     .shop-side {
       h4 {
@@ -685,61 +737,60 @@ main {
   }
 
   //product details starts
-  .pro-details{
-   .product-info{
-     padding-left: 30px;
-    >span{
-      font-size: 30px;
-    }
-    p{
-      font-size: 14px;
-      padding-bottom: 10px;
-    }
-    .dropdown{
-      .label{
-        margin:auto;
-        text-align: center;
-        
+  .pro-details {
+    .product-info {
+      padding-left: 30px;
+      > span {
+        font-size: 30px;
       }
-      >button{
-        display: block;
-        width: 80%;
-        text-align: left;
+      p {
+        font-size: 14px;
+        padding-bottom: 10px;
       }
-    }
-    .add-to-cart{
-      justify-content: flex-end;
-      width: 100%;
-      >button {
-        outline: none;
-        border: none;
-        width: 30%;
-        margin: 20px;
-        margin-right: 50px;
-        background-color: black;
-        color: white;
-        border-radius: 20px;
-        padding: 10px;
-        &:hover {
-          @include hover($costomRed, white);
+      .dropdown {
+        .label {
+          margin: auto;
+          text-align: center;
+        }
+        > button {
+          display: block;
+          width: 80%;
+          text-align: left;
         }
       }
-      .minus-plus{
-        margin:auto 40px auto auto;
-        width: 25%;
+      .add-to-cart {
+        justify-content: flex-end;
+        width: 100%;
+        > button {
+          outline: none;
+          border: none;
+          width: 30%;
+          margin: 20px;
+          margin-right: 50px;
+          background-color: black;
+          color: white;
+          border-radius: 20px;
+          padding: 10px;
+          &:hover {
+            @include hover($costomRed, white);
+          }
+        }
+        .minus-plus {
+          margin: auto 40px auto auto;
+          width: 25%;
+        }
+      }
+      .staff-details {
+        padding-bottom: 45px;
+        font-size: 14px;
+      }
+      .accordion {
+        .card-header {
+          background-color: white;
+          border: none;
+        }
       }
     }
-    .staff-details{
-      padding-bottom: 45px;
-      font-size: 14px;
-    }
-    .accordion{
-      .card-header{
-        background-color: white;
-        border: none;
-      }
-    }
-   }
   }
   //product details ends
 
@@ -765,12 +816,12 @@ main {
     }
   }
 
-  nav{
+  nav {
     padding-left: 50px;
-    .breadcrumb{
+    .breadcrumb {
       background-color: white;
       font-size: 13px;
-      i{
+      i {
         padding-left: 20px;
       }
     }
@@ -849,15 +900,15 @@ main {
 
   //dorpdown for all
 
-  .dropdown{
-    .btn{
+  .dropdown {
+    .btn {
       box-shadow: none;
       border: 1px solid $lightGray;
       color: $siteMainColor;
       font-size: 14px;
     }
-    .dropdown-menu{
-      a:hover{
+    .dropdown-menu {
+      a:hover {
         background-color: $costomRed;
         color: white;
       }
@@ -1062,7 +1113,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      .img-content{
+      .img-content {
         text-align: center;
         color: white;
         font-size: 30px;
@@ -1070,7 +1121,7 @@ main {
         h3 {
           font-size: 50px;
         }
-        button#play{
+        button#play {
           background-color: transparent;
           border: none;
           outline: none;
